@@ -1,6 +1,6 @@
-"use client";
-import React, { useRef, useEffect } from "react";
+import React from "react";
 import { productData } from "../data";
+import Link from "next/link";
 
 const Products = () => {
   return (
@@ -15,6 +15,12 @@ const Products = () => {
               and industrial applications. PT. Gajah Tunggal Tbk also produces
               and distributes other related rubber products such as synthetic
               rubber, tire cord, inner tubes, flaps, and O-rings.
+            </p>
+            <br />
+            <p className="display-7">
+              <strong>
+                Click On The Product Icon To See More Details About The Product
+              </strong>
             </p>
           </div>
 
@@ -36,34 +42,16 @@ const Products = () => {
               data-aos-delay="200"
             >
               {productData.map((product, index) => (
-                <div
-                  key={index}
-                  className={`col-lg-4 col-md-6 portfolio-item ${product.filter}`}
-                >
-                  <div className="product-content h-100">
-                    <img
-                      src={product.img.default.src}
-                      className="img-fluid"
-                      alt=""
-                    />
-                    <div className="portfolio-info">
-                      <h4>{product.title}</h4>
-                      <p>{product.description}</p>
-                      <a
-                        href={product.img.default.src}
-                        title={product.title}
-                        data-gallery={product.gallery}
-                        className="glightbox preview-link"
-                      ></a>
-                      <a
-                        href="project-details.html"
-                        title="More Details"
-                        className="details-link"
-                      >
-                        <i className="bi bi-link-45deg"></i>
-                      </a>
+                <div key={index} className={`col-lg-4 col-md-6 portfolio-item`}>
+                  <Link href={`/products${product.link}`}>
+                    <div className="product-content h-100">
+                      <img
+                        src={product.img.default.src}
+                        className="img-fluid"
+                        alt=""
+                      />
                     </div>
-                  </div>
+                  </Link>
                 </div>
               ))}
             </div>

@@ -1,5 +1,6 @@
 "use client";
 import React, { MouseEventHandler, useState } from "react";
+import { usePathname } from "next/navigation";
 
 interface HeaderProps {
   isMobileNavActive: boolean;
@@ -29,6 +30,8 @@ const Header: React.FC<HeaderProps> = ({
     setActiveDropdown(index === activeDropdown ? null : index);
   };
 
+  const pathname = usePathname();
+
   return (
     <>
       <header id="header" className="header d-flex align-items-center">
@@ -57,12 +60,20 @@ const Header: React.FC<HeaderProps> = ({
           >
             <ul>
               <li>
-                <a href="/" className="active" onClick={handleNavLinkClick}>
+                <a
+                  href="/"
+                  className={pathname === "/" ? "active" : ""}
+                  onClick={handleNavLinkClick}
+                >
                   Home
                 </a>
               </li>
               <li>
-                <a href="/about" onClick={handleNavLinkClick}>
+                <a
+                  href="/about"
+                  className={pathname === "/about" ? "active" : ""}
+                  onClick={handleNavLinkClick}
+                >
                   About
                 </a>
               </li>
@@ -98,43 +109,15 @@ const Header: React.FC<HeaderProps> = ({
                       <span>Deep Dropdown</span>{" "}
                       <i className="bi bi-chevron-down dropdown-indicator"></i>
                     </a>
-                    <ul>
-                      <li>
-                        <a href="#" onClick={(e) => handleDropdownClick(e, 3)}>
-                          Deep Dropdown 1
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#" onClick={(e) => handleDropdownClick(e, 4)}>
-                          Deep Dropdown 2
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#" onClick={(e) => handleDropdownClick(e, 5)}>
-                          Deep Dropdown 3
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a href="#" onClick={(e) => handleDropdownClick(e, 6)}>
-                      Dropdown 2
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" onClick={(e) => handleDropdownClick(e, 7)}>
-                      Dropdown 3
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" onClick={(e) => handleDropdownClick(e, 8)}>
-                      Dropdown 4
-                    </a>
                   </li>
                 </ul>
               </li>
               <li>
-                <a href="contact.html" onClick={handleNavLinkClick}>
+                <a
+                  href="/contact"
+                  className={pathname === "/contact" ? "active" : ""}
+                  onClick={handleNavLinkClick}
+                >
                   Contact
                 </a>
               </li>

@@ -27,7 +27,7 @@ const ProductsList = memo(({ filter }: { filter: string }) => {
           data-aos="fade-left"
           key={product.id}
         >
-          <Link href="/products/giti/detail">
+          <Link href={`/products/giti/${product.id}`}>
             <div className="product-content h-100">
               <h2
                 className="text-center mb-4"

@@ -11,8 +11,10 @@ const Footer = () => {
                 <div className="footer-info">
                   <h3>PT Suryajaya Muliatama</h3>
                   <p>
-                    Jl. KH Zainul Arifin<br />
-                    Komp. Ketapang Indah Blok B2 No. 6-77<br />
+                    Jl. KH Zainul Arifin
+                    <br />
+                    Komp. Ketapang Indah Blok B2 No. 6-77
+                    <br />
                     Jakarta Barat, 11140
                     <br />
                     <br />

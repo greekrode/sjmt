@@ -51,6 +51,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
       <body className={isMobileNavActive ? "mobile-nav-active" : ""}>
         <Head>
           <title>SJMT</title>
+          <meta property="og:title" content="SJMT" key="title" />
         </Head>
         <Header
           isMobileNavActive={isMobileNavActive}
