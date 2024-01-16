@@ -2688,3 +2688,24 @@ section {
 .tabs .nav-link:not(.active):hover {
   background-color: var(--color-primary);
 }
+.img-half-width {
+  width: 50% !important;
+  height: 100%;
+  object-fit: contain;
+}
+
+.center-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25vh;
+  overflow: hidden; /* This will hide any part of the image that exceeds the maximum height */
+}
+
+.product-name {
+  font-size: 1.5rem;
+}
+
+.product-name:hover {
+  color: var(--color-primary);
+}

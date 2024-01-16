@@ -59,22 +59,18 @@ const ProductsList = memo(
           >
             <Link href={`/products/giti/${product.id}`}>
               <div className="product-content h-100">
-                <h2
-                  className="text-center mb-4"
-                  style={{
-                    color: "#000",
-                    fontSize: "1.5rem",
-                  }}
-                >
+                <h2 className="text-center mb-4 product-name">
                   {product.name}
                 </h2>
-                <Image
-                  src={product.img.default.src}
-                  alt={product.name}
-                  width={product.img.default.width}
-                  height={product.img.default.height}
-                  className="img-fluid"
-                />
+                <div className="center-image">
+                  <Image
+                    src={product.img.default.src}
+                    alt={product.name}
+                    width={product.img.default.width}
+                    height={product.img.default.height}
+                    className="img-fluid img-half-width"
+                  />
+                </div>
               </div>
             </Link>
           </div>

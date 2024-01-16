@@ -14,7 +14,7 @@ const Page = () => {
       <Services />
       <Products />
       <Teams />
-      <Testimonials />
+      {/* <Testimonials /> */}
     </>
   );
 };

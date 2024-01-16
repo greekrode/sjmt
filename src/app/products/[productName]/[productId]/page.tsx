@@ -4,7 +4,11 @@ import bgImg from "../../../assets/img/breadcrumbs-bg.jpg";
 import img1 from "../../../assets/img/projects/remodeling-1.jpg";
 import Image from "next/image";
 import { Tab, Tabs, Table, Col, Row, ListGroup } from "react-bootstrap";
-import { gitiProductDataDetail } from "@/app/data";
+import {
+  gitiProductDataDetail,
+  gtProductDataDetail,
+  gtrProductDataDetail,
+} from "@/app/data";
 import ErrorPage from "next/error";
 
 type Overview = {
@@ -47,6 +51,14 @@ type ProductDetailType = {
   specs: Specs[];
 };
 
+type ProductName = "giti" | "gt" | "gtradial";
+
+const productDataMap: Record<ProductName, typeof gitiProductDataDetail> = {
+  giti: gitiProductDataDetail,
+  gt: gtProductDataDetail,
+  gtradial: gtrProductDataDetail,
+};
+
 const GitProductDetailTab = ({ product }: { product: ProductDetailType }) => {
   return (
     <div className="row justify-content-between gy-4 mt-4">
@@ -87,10 +99,10 @@ const GitProductDetailTab = ({ product }: { product: ProductDetailType }) => {
                   <tr>
                     <td>
                       <Row>
-                        <Col xs={3} className="h5 font-weight-bold">
+                        <Col xs={4} className="h5 font-weight-bold">
                           <i className="bi bi-trophy-fill"></i> Features
                         </Col>
-                        <Col xs={9} className="h5 font-weight-bold">
+                        <Col xs={8} className="h5 font-weight-bold">
                           <i className="bi bi-trophy-fill"></i> Benefits
                         </Col>
                       </Row>
@@ -439,7 +451,26 @@ const GtRadialProductDetailTab = ({
   );
 };
 
-const ProductDetail = ({ product }: { product: ProductDetailType }) => {
+const tabComponents = {
+  giti: GitProductDetailTab,
+  gt: GtProductDetailTab,
+  gtradial: GtRadialProductDetailTab,
+};
+
+const ProductDetail = ({
+  productName,
+  product,
+}: {
+  productName: ProductName;
+  product: ProductDetailType;
+}) => {
+  const TabDetailComponent =
+    tabComponents[productName as keyof typeof tabComponents];
+
+  if (!TabDetailComponent) {
+    return <ErrorPage statusCode={404} />;
+  }
+
   return (
     <section id="project-details" className="project-details">
       <div className="container" data-aos="fade-up" data-aos-delay="100">
@@ -468,14 +499,15 @@ const ProductDetail = ({ product }: { product: ProductDetailType }) => {
             <div className="portfolio-info">
               <Image
                 className="img-fluid"
-                src={img1.src}
-                width={img1.width}
-                height={img1.height}
+                src={product.img.default.src}
+                width={product.img.default.width}
+                height={product.img.default.height}
                 alt=""
               />
             </div>
           </div>
         </div>
+        {TabDetailComponent && <TabDetailComponent product={product} />}
       </div>
     </section>
   );
@@ -486,7 +518,9 @@ const Page = ({
 }: {
   params: { productId: string; productName: string };
 }) => {
-  const product = gitiProductDataDetail.find(
+  const productName = params.productName as ProductName;
+  const productData = productDataMap[productName] || [];
+  const product = productData.find(
     (item) => item.id === Number(params.productId)
   );
 
@@ -518,7 +552,7 @@ const Page = ({
           </ol>
         </div>
       </div>
-      <ProductDetail product={product} />
+      <ProductDetail productName={productName} product={product} />
     </>
   );
 };
