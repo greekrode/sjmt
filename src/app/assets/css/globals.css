@@ -17,8 +17,8 @@ h :root {
 /* Colors */
 :root {
   --color-default: #364d59;
-  --color-primary: #feb900;
-  --color-secondary: #52565e;
+  --color-secondary: #043298;
+  --color-primary: #f90405;
 }
 
 /* Smooth scroll behavior */
@@ -41,7 +41,7 @@ a {
 }
 
 a:hover {
-  color: #ffc732;
+  color: var(--color-secondary);
   text-decoration: none;
 }
 
@@ -1647,7 +1647,7 @@ section {
   line-height: 0;
   color: var(--color-primary);
   border-radius: 50%;
-  border: 2px dotted #ffd565;
+  border: 2px dotted var(--color-secondary);
 }
 
 .contact .info-item h3 {

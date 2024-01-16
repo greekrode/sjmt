@@ -69,7 +69,7 @@ export const productData = [
     link: "/gtradial",
   },
   {
-    img: require("./assets/img/projects/construction-1.jpg"),
+    img: require("./assets/img/products/gt.png"),
     title: "GT",
     link: "/gt",
   },
@@ -188,6 +188,173 @@ export const gitiFilterData = [
     name: "Construction",
   },
 ];
+
+export const gtProductData = [
+  {
+    id: 1,
+    type: ["remodeling"],
+    name: "Remodeling 1",
+    img: require("./assets/img/projects/remodeling-1.jpg"),
+  },
+  {
+    id: 2,
+    type: ["construction"],
+    name: "Construction 1",
+    img: require("./assets/img/projects/construction-1.jpg"),
+  },
+  {
+    id: 3,
+    type: ["remodeling"],
+    name: "Remodeling 1",
+    img: require("./assets/img/projects/remodeling-1.jpg"),
+  },
+  {
+    id: 4,
+    type: ["construction"],
+    name: "Construction 1",
+    img: require("./assets/img/projects/construction-1.jpg"),
+  },
+];
+
+export const gtProductDataDetail = [
+  {
+    id: 1,
+    name: "GT Traction",
+    img: require("./assets/img/projects/remodeling-1.jpg"),
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, voluptatum.",
+    type: ["All Terrain", "All Drive"],
+    overview: {
+      rim_size: "16-24",
+      aspect_ratio: "50-85",
+      section_width: "205-315",
+      speed_rating: "H",
+    },
+    fnb: [
+      {
+        features:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, voluptatum.",
+        benefits:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, voluptatum.",
+      },
+      {
+        features:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, voluptatum.",
+        benefits:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, voluptatum.",
+      },
+    ],
+    specs: [
+      {
+        tire_size: "10.00R20",
+        pr: "18",
+        load_index: "149/146",
+        speed_rating: "F",
+        approved_rim: "7.5",
+        outer_diameter: "1054",
+        tread_depth: "22.6",
+        max_load: "3250/3000",
+        max_pressure_kpa: "930/930",
+        max_pressure_psi: "135/135",
+      },
+    ],
+  },
+];
+
+export const gtFilterData = [
+  {
+    key: "remodeling",
+    name: "Remodeling",
+  },
+  {
+    key: "construction",
+    name: "Construction",
+  },
+]
+
+export const gtrProductData = [
+  {
+    id: 1,
+    type: ["remodeling"],
+    name: "Remodeling 1",
+    img: require("./assets/img/projects/remodeling-1.jpg"),
+  },
+  {
+    id: 2,
+    type: ["construction"],
+    name: "Construction 1",
+    img: require("./assets/img/projects/construction-1.jpg"),
+  },
+  {
+    id: 3,
+    type: ["remodeling"],
+    name: "Remodeling 1",
+    img: require("./assets/img/projects/remodeling-1.jpg"),
+  },
+  {
+    id: 4,
+    type: ["construction"],
+    name: "Construction 1",
+    img: require("./assets/img/projects/construction-1.jpg"),
+  },
+];
+
+export const gtrProductDataDetail = [
+  {
+    id: 1,
+    name: "GT Traction",
+    img: require("./assets/img/projects/remodeling-1.jpg"),
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, voluptatum.",
+    type: ["All Terrain", "All Drive"],
+    overview: {
+      rim_size: "16-24",
+      aspect_ratio: "50-85",
+      section_width: "205-315",
+      speed_rating: "H",
+    },
+    fnb: [
+      {
+        features:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, voluptatum.",
+        benefits:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, voluptatum.",
+      },
+      {
+        features:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, voluptatum.",
+        benefits:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, voluptatum.",
+      },
+    ],
+    specs: [
+      {
+        tire_size: "10.00R20",
+        pr: "18",
+        load_index: "149/146",
+        speed_rating: "F",
+        approved_rim: "7.5",
+        outer_diameter: "1054",
+        tread_depth: "22.6",
+        max_load: "3250/3000",
+        max_pressure_kpa: "930/930",
+        max_pressure_psi: "135/135",
+      },
+    ],
+  },
+];
+
+export const gtrFilterData = [
+  {
+    key: "remodeling",
+    name: "Remodeling",
+  },
+  {
+    key: "construction",
+    name: "Construction",
+  },
+]
+
 
 export const teamsData = [
   {

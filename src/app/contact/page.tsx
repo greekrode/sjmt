@@ -1,8 +1,28 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import bgImg from "../assets/img/breadcrumbs-bg.jpg";
-import aboutImg from "../assets/img/about.jpg";
 
 const Page = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+
+  const handleChange = (e: any) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e: any) => {
+    e.preventDefault();
+    const message = `Name: ${formData.name}\r\n\r\nEmail: ${formData.email}\r\n\r\nSubject: ${formData.subject}\r\n\r\nMessage: ${formData.message}`;
+    const whatsappUrl = `whatsapp://send?phone=6281802803970&text=${encodeURIComponent(
+      message
+    )}`;
+    // Redirect to the URL
+    window.open(whatsappUrl, "_blank");
+  };
   return (
     <>
       <div
@@ -43,7 +63,11 @@ const Page = () => {
               <div className="info-item d-flex flex-column justify-content-center align-items-center">
                 <i className="bi bi-envelope"></i>
                 <h3>Email Us</h3>
-                <p>contact@sjmt.com</p>
+                <p>
+                  <a href="mailto:admin@suryajayamta.id">
+                    admin@suryajayamta.id
+                  </a>
+                </p>
               </div>
             </div>
 
@@ -51,7 +75,11 @@ const Page = () => {
               <div className="info-item  d-flex flex-column justify-content-center align-items-center">
                 <i className="bi bi-telephone"></i>
                 <h3>Call Us</h3>
-                <p>+1 5589 55488 55</p>
+                <p>
+                  <a href="tel:+622122631485">+6221 2263 1485</a>
+                  <br />
+                  <a href="tel:+622122636685">+6221 2263 6685</a>
+                </p>
               </div>
             </div>
           </div>
@@ -71,8 +99,7 @@ const Page = () => {
 
             <div className="col-lg-6">
               <form
-                action="forms/contact.php"
-                method="post"
+                onSubmit={handleSubmit}
                 role="form"
                 className="php-email-form"
               >
@@ -84,6 +111,7 @@ const Page = () => {
                       className="form-control"
                       id="name"
                       placeholder="Your Name"
+                      onChange={handleChange}
                       required
                     />
                   </div>
@@ -94,6 +122,7 @@ const Page = () => {
                       name="email"
                       id="email"
                       placeholder="Your Email"
+                      onChange={handleChange}
                       required
                     />
                   </div>
@@ -105,6 +134,7 @@ const Page = () => {
                     name="subject"
                     id="subject"
                     placeholder="Subject"
+                    onChange={handleChange}
                     required
                   />
                 </div>
@@ -114,6 +144,7 @@ const Page = () => {
                     name="message"
                     rows={5}
                     placeholder="Message"
+                    onChange={handleChange}
                     required
                   ></textarea>
                 </div>

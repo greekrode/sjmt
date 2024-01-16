@@ -29,6 +29,14 @@ const Hero = () => {
                 >
                   Want to Know More?
                 </a>
+                <a
+                  data-aos="fade-up"
+                  data-aos-delay="200"
+                  href="/contact"
+                  className="btn-get-started"
+                >
+                  Contact Us
+                </a>
               </div>
             </div>
           </div>

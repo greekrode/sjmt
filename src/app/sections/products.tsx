@@ -10,11 +10,10 @@ const Products = () => {
           <div className="section-header">
             <h2>Our Products</h2>
             <p>
-              PT. Gajah Tunggal Tbk manufactures and distributes high-quality
-              tires for passenger cars, SUVs/light trucks, off-road vehicles,
-              and industrial applications. PT. Gajah Tunggal Tbk also produces
-              and distributes other related rubber products such as synthetic
-              rubber, tire cord, inner tubes, flaps, and O-rings.
+              We distributes several brands of tires, such as GT Radial, Gajah
+              Tunngal, and Giti. We also offer a wide range of quality car,
+              truck, and off-road tires, such as TBR and OTR. For PCR, LTR, and
+              TBR, it's done via company or retail stores across Jabodetabek.
             </p>
             <br />
             <p className="display-7">

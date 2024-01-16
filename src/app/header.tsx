@@ -95,19 +95,13 @@ const Header: React.FC<HeaderProps> = ({
                     </a>
                   </li>
                   <li>
-                    <a href="#" onClick={handleNavLinkClick}>
+                    <a href="/products/gtradial" onClick={handleNavLinkClick}>
                       GT Radial
                     </a>
                   </li>
                   <li>
-                    <a href="#" onClick={handleNavLinkClick}>
-                      Gajah Tunggal
-                    </a>
-                  </li>
-                  <li className="dropdown">
-                    <a href="#" onClick={(e) => handleDropdownClick(e, 2)}>
-                      <span>Deep Dropdown</span>{" "}
-                      <i className="bi bi-chevron-down dropdown-indicator"></i>
+                    <a href="/products/gt" onClick={handleNavLinkClick}>
+                      GT
                     </a>
                   </li>
                 </ul>
