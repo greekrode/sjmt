@@ -5,7 +5,7 @@ import Link from "next/link";
 const Products = () => {
   return (
     <>
-      <section id="projects" className="projects">
+      <section id="products" className="projects">
         <div className="container" data-aos="fade-up">
           <div className="section-header">
             <h2>Our Products</h2>

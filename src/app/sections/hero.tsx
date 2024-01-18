@@ -32,6 +32,14 @@ const Hero = () => {
                 <a
                   data-aos="fade-up"
                   data-aos-delay="200"
+                  href="#products"
+                  className="btn-get-started"
+                >
+                  Our Products
+                </a>
+                <a
+                  data-aos="fade-up"
+                  data-aos-delay="200"
                   href="/contact"
                   className="btn-get-started"
                 >

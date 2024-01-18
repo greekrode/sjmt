@@ -2694,6 +2694,12 @@ section {
   object-fit: contain;
 }
 
+.img-75-width {
+  width: 75% !important;
+  height: 100%;
+  object-fit: contain;
+}
+
 .center-image {
   display: flex;
   justify-content: center;

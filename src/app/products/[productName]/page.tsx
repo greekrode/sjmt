@@ -57,7 +57,7 @@ const ProductsList = memo(
             data-aos="fade-left"
             key={product.id}
           >
-            <Link href={`/products/giti/${product.id}`}>
+            <Link href={`/products/${productName}/${product.id}`}>
               <div className="product-content h-100">
                 <h2 className="text-center mb-4 product-name">
                   {product.name}

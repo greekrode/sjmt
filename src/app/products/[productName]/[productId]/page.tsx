@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import bgImg from "../../../assets/img/breadcrumbs-bg.jpg";
-import img1 from "../../../assets/img/projects/remodeling-1.jpg";
 import Image from "next/image";
 import { Tab, Tabs, Table, Col, Row, ListGroup } from "react-bootstrap";
 import {
@@ -12,15 +11,15 @@ import {
 import ErrorPage from "next/error";
 
 type Overview = {
-  rim_size: string;
-  aspect_ratio: string;
-  section_width: string;
-  speed_rating: string;
+  rim_size?: string;
+  aspect_ratio?: string;
+  section_width?: string;
+  speed_rating?: string;
 };
 
 type Fnb = {
-  features: string;
-  benefits: string;
+  features?: string;
+  benefits?: string;
 };
 
 type Specs = {
@@ -45,10 +44,10 @@ type ProductDetailType = {
   name: string;
   img: any;
   description: string;
-  type: string[];
-  overview: Overview;
-  fnb: Fnb[];
-  specs: Specs[];
+  type?: string[];
+  overview?: Overview;
+  fnb?: Fnb[];
+  specs?: Specs[];
 };
 
 type ProductName = "giti" | "gt" | "gtradial";
@@ -210,11 +209,9 @@ const GtProductDetailTab = ({ product }: { product: ProductDetailType }) => {
                   <tr>
                     <td>
                       <Row>
-                        <Col xs={3} className="h5 font-weight-bold">
-                          <i className="bi bi-trophy-fill"></i> Features
-                        </Col>
-                        <Col xs={9} className="h5 font-weight-bold">
-                          <i className="bi bi-trophy-fill"></i> Benefits
+                        <Col className="h5 font-weight-bold">
+                          <i className="bi bi-trophy-fill"></i> Features and
+                          Benefits
                         </Col>
                       </Row>
                     </td>
@@ -225,8 +222,7 @@ const GtProductDetailTab = ({ product }: { product: ProductDetailType }) => {
                     <tr>
                       <td>
                         <Row>
-                          <Col xs={3}>{item.features}</Col>
-                          <Col xs={9}>{item.benefits}</Col>
+                          <Col>{item.features}</Col>
                         </Row>
                       </td>
                     </tr>
@@ -299,7 +295,9 @@ const GtProductDetailTab = ({ product }: { product: ProductDetailType }) => {
               {product.specs.map((item) => (
                 <tr>
                   <td>{item.tire_size}</td>
-                  <td>{item.load_index}</td>
+                  <td>
+                    {item.load_index_s} / {item.load_index_d}
+                  </td>
                   <td>{item.speed_rating}</td>
                 </tr>
               ))}
@@ -496,9 +494,11 @@ const ProductDetail = ({
           </div>
 
           <div className="col-lg-3">
-            <div className="portfolio-info">
+            <div className="portfolio-info center-image" style={{
+              height: "35vh"
+            }}>
               <Image
-                className="img-fluid"
+                className="img-fluid img-75-width"
                 src={product.img.default.src}
                 width={product.img.default.width}
                 height={product.img.default.height}

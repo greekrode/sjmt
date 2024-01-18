@@ -88,7 +88,7 @@ const Header: React.FC<HeaderProps> = ({
                     } dropdown-indicator`}
                   ></i>
                 </a>
-                <ul>
+                <ul className={activeDropdown === 1 ? "dropdown-active" : ""}>
                   <li>
                     <a href="/products/giti" onClick={handleNavLinkClick}>
                       GITI
