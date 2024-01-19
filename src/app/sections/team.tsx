@@ -44,6 +44,8 @@ const Teams = () => {
                         height={image.img.default.height}
                         alt={""}
                         className="img-fluid"
+                        priority={true}
+                        loading="eager"
                       />
                     </div>
                   ))}

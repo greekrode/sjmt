@@ -69,6 +69,8 @@ const ProductsList = memo(
                     width={product.img.default.width}
                     height={product.img.default.height}
                     className="img-fluid img-half-width"
+                    priority={true}
+                    loading="eager"
                   />
                 </div>
               </div>

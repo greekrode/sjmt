@@ -659,6 +659,8 @@ const ProductDetailInfo = ({
                 width={product.img.default.width}
                 height={product.img.default.height}
                 alt=""
+                priority={true}
+                loading="eager"
               />
             </div>
           </div>
