@@ -167,7 +167,7 @@ export const gitiProductDataDetail = [
       },
       {
         features: "Deep tread pattern design",
-        benefits: "Provide longer tire service life",
+        benefits: "Provides longer tire service life",
       },
       {
         features: "Tie-bar design between center blocks",
@@ -1064,13 +1064,13 @@ export const gtProductDataDetail = [
       },
       {
         features:
-          "Provide excellent traction and maneuverability on all road conditions",
+          "Provides excellent traction and maneuverability on all road conditions",
       },
       {
         features: "Longer tread life",
       },
       {
-        features: "Provide excellent cut and tear resistance",
+        features: "Provides excellent cut and tear resistance",
       },
     ],
     specs: [
@@ -1540,7 +1540,7 @@ export const gtProductDataDetail = [
       },
     ],
     description:
-      "Developed for regional drive and all position tire of light duty trucks. Provide excellent off road traction, high durability, better cut resistance, and long service life",
+      "Developed for regional drive and all position tire of light duty trucks. Provides excellent off road traction, high durability, better cut resistance, and long service life",
     fnb: [
       {
         features: "Special tread compound",
@@ -2072,7 +2072,7 @@ export const gtrProductDataDetail = [
       },
       {
         features: "Advance directional tread block design",
-        benefits: "Provide fast acceleration and good braking.",
+        benefits: "Provides fast acceleration and good braking.",
       },
       {
         features: "Modern strong shoulder block with lateral groove",
@@ -3606,7 +3606,7 @@ export const gtrProductDataDetail = [
       {
         features: "4 wide longitudinal grooves",
         benefits:
-          "Provide superior wet performance by rapid drainage & reduce aquaplaning",
+          "Provides superior wet performance by rapid drainage & reduce aquaplaning",
       },
       {
         features: "Geometrically optimized sipes",
@@ -3616,12 +3616,12 @@ export const gtrProductDataDetail = [
       {
         features: "Stiff circumferential ribs",
         benefits:
-          "Provide optimal braking, good directional and driving stability",
+          "Provides optimal braking, good directional and driving stability",
       },
       {
         features: "Stiff shoulder blocks",
         benefits:
-          "Provide cornering stability, excellent traction and braking and steering precision as well",
+          "Provides cornering stability, excellent traction and braking and steering precision as well",
       },
     ],
     specs: [
@@ -3874,7 +3874,7 @@ export const gtrProductDataDetail = [
     name: "Savero M/T",
     img: require("./assets/img/products/gtradial/Savero M:T.png"),
     description:
-      "SAVERO MT IS SUPERIOR DURABILITY AND OFF ROAD PERFORMANCE WITH PROVIDE MAXIMUM TRACTION AND CONTROL.",
+      "SAVERO MT HAS SUPERIOR DURABILITY AND OFF ROAD PERFORMANCE WITH MAXIMUM TRACTION AND CONTROL.",
     type: [
       {
         name: "Mud Terrain",
