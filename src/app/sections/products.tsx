@@ -6,7 +6,7 @@ import Image from "next/image";
 const Products = () => {
   return (
     <>
-      <section id="products" className="products p-2">
+      <section id="products" className="products p-2 mt-10">
         <div className="container" data-aos="fade-up">
           <div className="section-header">
             <h2>Our Products</h2>
