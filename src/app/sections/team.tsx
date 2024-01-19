@@ -17,7 +17,7 @@ const Teams = () => {
                   data-bs-toggle="tab"
                   data-bs-target={`#tab-${index}`}
                 >
-                  <h4>{team.name}</h4>
+                  <h4 className="text-center">{team.name}</h4>
                 </a>
               </li>
             ))}

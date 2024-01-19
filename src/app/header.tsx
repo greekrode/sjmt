@@ -18,7 +18,8 @@ const Header: React.FC<HeaderProps> = ({
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 100) {
+      const scrollThreshold = window.innerWidth > 768 ? 100 : 50;
+      if (window.scrollY > scrollThreshold) {
         headerRef.current?.classList.add("header-scrolled");
       } else {
         headerRef.current?.classList.remove("header-scrolled");

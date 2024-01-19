@@ -18,13 +18,39 @@ const Footer = () => {
                     Jakarta Barat, 11140
                     <br />
                     <br />
-                    <strong>Phone:</strong> +6221 2263 1485
+                    <a
+                      href="tel:+622122631485"
+                      style={{
+                        color: "#fff",
+                      }}
+                    >
+                      <strong>Phone:</strong> +6221 2263 1485
+                    </a>
                     <br />
-                    <strong>Phone:</strong> +6221 2263 6685
+                    <a
+                      href="tel:+622122636685"
+                      style={{
+                        color: "#fff",
+                      }}
+                    >
+                      <strong>Phone:</strong> +6221 2263 6685
+                    </a>
                     <br />
-                    <strong>Whatsapp:</strong> +62818 0280 3970
+                    <a
+                      href="whatsapp://send?phone=6281802803970"
+                      style={{ color: "#fff" }}
+                    >
+                      <strong>Whatsapp:</strong> +62818 0280 3970
+                    </a>
                     <br />
-                    <strong>Email:</strong> contact@sjmt.com
+                    <a
+                      href="mailto:admin@suryajayamta.id"
+                      style={{
+                        color: "#fff",
+                      }}
+                    >
+                      <strong>Email:</strong> admin@suryajayamta.id
+                    </a>
                     <br />
                   </p>
                   <div className="social-links d-flex mt-3">
