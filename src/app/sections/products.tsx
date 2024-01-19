@@ -1,6 +1,7 @@
 import React from "react";
 import { productData } from "../data";
 import Link from "next/link";
+import Image from "next/image";
 
 const Products = () => {
   return (
@@ -45,8 +46,10 @@ const Products = () => {
                 <div key={index} className={`col-lg-4 col-md-6 portfolio-item`}>
                   <Link href={`/products${product.link}`}>
                     <div className="product-content h-100">
-                      <img
+                      <Image
                         src={product.img.default.src}
+                        width={product.img.default.width}
+                        height={product.img.default.height}
                         className="img-fluid"
                         alt=""
                       />
