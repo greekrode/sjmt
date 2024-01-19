@@ -624,16 +624,14 @@ const ProductDetailInfo = ({
               <p className="display-6">{product.description}</p>
             </div>
             <div
-              className="d-flex flex-wrap align-items-center mt-10"
+              className="row mt-10 pl-4"
               data-aos="fade-up"
               data-aos-delay={200}
             >
-              {/* <ListGroup variant="flush"> */}
               {product.type?.map((type, index) => (
                 <div
                   key={index}
-                  className="d-flex align-items-center position-relative product-type"
-                  style={{ flex: "1 0 100%", maxWidth: "30%" }}
+                  className="col-6 col-md-4 col-lg-3 d-flex align-items-center position-relative product-type mb-3"
                 >
                   <Image
                     src={type.img.default.src}
@@ -642,10 +640,9 @@ const ProductDetailInfo = ({
                     height={type.img.default.height}
                     className="icon-image"
                   />
-                  <p>{type.name}</p>
+                  <p className="ms-2 mr-4">{type.name}</p>
                 </div>
               ))}
-              {/* </ListGroup> */}
             </div>
           </div>
 
