@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   function mobileNavToogle() {
-    document.querySelector("body").classList.toggle("mobile-nav-active");
+    document.querySelector("").classList.toggle("mobile-nav-active");
     mobileNavShow.classList.toggle("d-none");
     mobileNavHide.classList.toggle("d-none");
   }

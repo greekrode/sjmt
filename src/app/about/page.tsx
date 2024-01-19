@@ -2,6 +2,7 @@ import React from "react";
 import bgImg from "../assets/img/breadcrumbs-bg.jpg";
 import aboutImg from "../assets/img/about.jpg";
 import Link from "next/link";
+import { Metadata } from "next";
 
 const Page = () => {
   return (
@@ -143,3 +144,7 @@ const Page = () => {
 };
 
 export default Page;
+
+export const metadata: Metadata = {
+  title: "SJMT | About",
+};
