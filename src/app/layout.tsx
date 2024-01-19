@@ -11,6 +11,7 @@ import "./assets/vendor/swiper/swiper-bundle.min.css";
 import { inter, open_sans, roboto, work_sans } from "./fonts";
 import Footer from "./footer";
 import Header from "./header";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   const [isMobileNavActive, setIsMobileNavActive] = useState(false);
@@ -70,6 +71,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
         >
           <i className="bi bi-arrow-up-short"></i>
         </a>
+        <SpeedInsights />
       </body>
     </html>
   );
