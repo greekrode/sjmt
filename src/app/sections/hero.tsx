@@ -1,9 +1,5 @@
 import React from "react";
 import HeroCarousel1 from "../assets/img/hero-carousel/hero-carousel-1.jpg";
-import HeroCarousel2 from "../assets/img/hero-carousel/hero-carousel-2.jpg";
-import HeroCarousel3 from "../assets/img/hero-carousel/hero-carousel-3.jpg";
-import HeroCarousel4 from "../assets/img/hero-carousel/hero-carousel-4.jpg";
-import HeroCarousel5 from "../assets/img/hero-carousel/hero-carousel-5.jpg";
 
 const Hero = () => {
   return (
@@ -58,22 +54,6 @@ const Hero = () => {
           <div
             className="carousel-item active"
             style={{ backgroundImage: `url(${HeroCarousel1.src})` }}
-          ></div>
-          <div
-            className="carousel-item"
-            style={{ backgroundImage: `url(${HeroCarousel2.src})` }}
-          ></div>
-          <div
-            className="carousel-item"
-            style={{ backgroundImage: `url(${HeroCarousel3.src})` }}
-          ></div>
-          <div
-            className="carousel-item"
-            style={{ backgroundImage: `url(${HeroCarousel4.src})` }}
-          ></div>
-          <div
-            className="carousel-item"
-            style={{ backgroundImage: `url(${HeroCarousel5.src})` }}
           ></div>
         </div>
       </section>

@@ -129,6 +129,7 @@ section {
   font-weight: 500;
   color: #fff;
   font-family: var(--font-secondary);
+  text-align: center;
 }
 
 .breadcrumbs ol {
@@ -244,12 +245,19 @@ section {
 # Header
 --------------------------------------------------------------*/
 .header {
-  z-index: 997;
-  position: absolute;
+  z-index: 1000;
+  position: fixed;
   padding: 30px 0;
   top: 0;
   left: 0;
   right: 0;
+  width: 100%;
+  transition: all 0.4s;
+}
+
+.header.header-scrolled {
+  background: #000;
+  box-shadow: 0px 0px 30px rgba(82, 86, 94, 0.1);
 }
 
 .header .logo img {
@@ -258,7 +266,7 @@ section {
 }
 
 .header .logo h1 {
-  font-size: 24px;
+  font-size: 36px;
   font-weight: 700;
   color: #fff;
   margin-bottom: 0;
@@ -861,16 +869,17 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Our Projects Section
+# Our products Section
 --------------------------------------------------------------*/
-.projects .product-flters {
-  padding: 0;
+.products .product-filters {
+  border-bottom: 1px solid #e2e4e6;
+  padding: 0 0 20px 0;
   margin: 0 auto 20px auto;
   list-style: none;
   text-align: center;
 }
 
-.projects .product-flters li {
+.products .product-filters li {
   cursor: pointer;
   display: inline-block;
   padding: 0;
@@ -882,36 +891,36 @@ section {
   transition: all 0.3s ease-in-out;
 }
 
-.projects .product-flters li:hover,
-.projects .product-flters li.filter-active {
+.products .product-filters li:hover,
+.products .product-filters li.filter-active {
   color: var(--color-primary);
 }
 
-.projects .product-flters li:first-child {
+.products .product-filters li:first-child {
   margin-left: 0;
 }
 
-.projects .product-flters li:last-child {
+.products .product-filters li:last-child {
   margin-right: 0;
 }
 
 @media (max-width: 575px) {
-  .projects .product-flters li {
+  .products .product-filters li {
     font-size: 14px;
     margin: 0 5px;
   }
 }
 
-.projects .product-content {
+.products .product-content {
   position: relative;
   overflow: hidden;
 }
 
-.projects .product-content img {
+.products .product-content img {
   transition: 0.3s;
 }
 
-.projects .product-content .portfolio-info {
+.products .product-content .product-inof {
   opacity: 0;
   position: absolute;
   inset: 0;
@@ -921,7 +930,7 @@ section {
   padding: 15px;
 }
 
-.projects .product-content .portfolio-info h4 {
+.products .product-content .product-inof h4 {
   font-size: 14px;
   padding: 5px 10px;
   font-weight: 400;
@@ -930,7 +939,7 @@ section {
   background-color: var(--color-primary);
 }
 
-.projects .product-content .portfolio-info p {
+.products .product-content .product-inof p {
   position: absolute;
   bottom: 10px;
   text-align: center;
@@ -942,8 +951,8 @@ section {
   color: rgba(255, 255, 255, 0.8);
 }
 
-.projects .product-content .portfolio-info .preview-link,
-.projects .product-content .portfolio-info .details-link {
+.products .product-content .product-inof .preview-link,
+.products .product-content .product-inof .details-link {
   position: absolute;
   left: calc(50% - 40px);
   font-size: 26px;
@@ -953,22 +962,22 @@ section {
   line-height: 1.2;
 }
 
-.projects .product-content .portfolio-info .preview-link:hover,
-.projects .product-content .portfolio-info .details-link:hover {
+.products .product-content .product-inof .preview-link:hover,
+.products .product-content .product-inof .details-link:hover {
   color: var(--color-primary);
 }
 
-.projects .product-content .portfolio-info .details-link {
+.products .product-content .product-inof .details-link {
   left: 50%;
   font-size: 34px;
   line-height: 0;
 }
 
-.projects .product-content:hover .portfolio-info {
+.products .product-content:hover .product-inof {
   opacity: 1;
 }
 
-/* .projects .product-content:hover img {
+/* .products .product-content:hover img {
   transform: scale(1.1);
 } */
 
@@ -1369,24 +1378,25 @@ section {
 /*--------------------------------------------------------------
 # Servie Cards Section
 --------------------------------------------------------------*/
-.services-cards h3 {
-  font-size: 20px;
+.about-comp-cards h3 {
+  font-size: 30px;
   font-weight: 700;
+  margin-bottom: 15px;
   color: var(--color-secondary);
 }
 
-.services-cards p {
+.about-comp-cards p {
   font-size: 15px;
 }
 
-.services-cards ul li {
+.about-comp-cards ul li {
   display: flex;
   align-items: center;
   font-size: 14px;
   padding-top: 10px;
 }
 
-.services-cards ul li i {
+.about-comp-cards ul li i {
   font-size: 16px;
   color: var(--color-primary);
   margin-right: 6px;
@@ -1395,11 +1405,11 @@ section {
 /*--------------------------------------------------------------
 # Projet Details Section
 --------------------------------------------------------------*/
-.project-details .portfolio-details-slider img {
+.product-details .portfolio-details-slider img {
   width: 100%;
 }
 
-.project-details
+.product-details
   .portfolio-details-slider
   .swiper-pagination
   .swiper-pagination-bullet {
@@ -1409,21 +1419,21 @@ section {
   opacity: 1;
 }
 
-.project-details
+.product-details
   .portfolio-details-slider
   .swiper-pagination
   .swiper-pagination-bullet-active {
   background-color: var(--color-primary);
 }
 
-.project-details .swiper-button-prev,
-.project-details .swiper-button-next {
+.product-details .swiper-button-prev,
+.product-details .swiper-button-next {
   width: 48px;
   height: 48px;
 }
 
-.project-details .swiper-button-prev:after,
-.project-details .swiper-button-next:after {
+.product-details .swiper-button-prev:after,
+.product-details .swiper-button-next:after {
   color: rgba(255, 255, 255, 0.8);
   background-color: rgba(0, 0, 0, 0.2);
   font-size: 24px;
@@ -1436,19 +1446,19 @@ section {
   transition: 0.3s;
 }
 
-.project-details .swiper-button-prev:hover:after,
-.project-details .swiper-button-next:hover:after {
+.product-details .swiper-button-prev:hover:after,
+.product-details .swiper-button-next:hover:after {
   background-color: rgba(0, 0, 0, 0.6);
 }
 
 @media (max-width: 575px) {
-  .project-details .swiper-button-prev,
-  .project-details .swiper-button-next {
+  .product-details .swiper-button-prev,
+  .product-details .swiper-button-next {
     display: none;
   }
 }
 
-.project-details .portfolio-info h3 {
+.product-details .product-inof h3 {
   font-size: 22px;
   font-weight: 700;
   margin-bottom: 20px;
@@ -1456,7 +1466,7 @@ section {
   position: relative;
 }
 
-.project-details .portfolio-info h3:after {
+.product-details .product-inof h3:after {
   content: "";
   position: absolute;
   display: block;
@@ -1467,26 +1477,26 @@ section {
   bottom: 0;
 }
 
-.project-details .portfolio-info ul {
+.product-details .product-inof ul {
   list-style: none;
   padding: 0;
   font-size: 15px;
 }
 
-.project-details .portfolio-info ul li {
+.product-details .product-inof ul li {
   display: flex;
   flex-direction: column;
   padding-bottom: 15px;
 }
 
-.project-details .portfolio-info ul strong {
+.product-details .product-inof ul strong {
   text-transform: uppercase;
   font-weight: 400;
   color: #838893;
   font-size: 14px;
 }
 
-.project-details .portfolio-info .btn-visit {
+.product-details .product-inof .btn-visit {
   padding: 8px 40px;
   background: var(--color-primary);
   color: #fff;
@@ -1494,22 +1504,22 @@ section {
   transition: 0.3s;
 }
 
-.project-details .portfolio-info .btn-visit:hover {
+.product-details .product-inof .btn-visit:hover {
   background: #ffc019;
 }
 
-.project-details .portfolio-description h2 {
-  font-size: 26px;
+.product-details .product-description h2 {
+  font-size: 46px;
   font-weight: 700;
   margin-bottom: 20px;
   color: var(--color-secondary);
 }
 
-.project-details .portfolio-description p {
+.product-details .product-description p {
   padding: 0;
 }
 
-.project-details .portfolio-description .testimonial-item {
+.product-details .product-description .testimonial-item {
   padding: 30px 30px 0 30px;
   position: relative;
   background: #f5f6f7;
@@ -1517,7 +1527,7 @@ section {
   margin-bottom: 50px;
 }
 
-.project-details .portfolio-description .testimonial-item .testimonial-img {
+.product-details .product-description .testimonial-item .testimonial-img {
   width: 90px;
   border-radius: 50px;
   border: 6px solid #fff;
@@ -1525,33 +1535,33 @@ section {
   margin: 0 10px 0 0;
 }
 
-.project-details .portfolio-description .testimonial-item h3 {
+.product-details .product-description .testimonial-item h3 {
   font-size: 18px;
   font-weight: bold;
   margin: 15px 0 5px 0;
   padding-top: 20px;
 }
 
-.project-details .portfolio-description .testimonial-item h4 {
+.product-details .product-description .testimonial-item h4 {
   font-size: 14px;
   color: #6c757d;
   margin: 0;
 }
 
-.project-details .portfolio-description .testimonial-item .quote-icon-left,
-.project-details .portfolio-description .testimonial-item .quote-icon-right {
+.product-details .product-description .testimonial-item .quote-icon-left,
+.product-details .product-description .testimonial-item .quote-icon-right {
   color: #ffd565;
   font-size: 26px;
   line-height: 0;
 }
 
-.project-details .portfolio-description .testimonial-item .quote-icon-left {
+.product-details .product-description .testimonial-item .quote-icon-left {
   display: inline-block;
   left: -5px;
   position: relative;
 }
 
-.project-details .portfolio-description .testimonial-item .quote-icon-right {
+.product-details .product-description .testimonial-item .quote-icon-right {
   display: inline-block;
   right: -5px;
   position: relative;
@@ -1559,7 +1569,7 @@ section {
   transform: scale(-1, -1);
 }
 
-.project-details .portfolio-description .testimonial-item p {
+.product-details .product-description .testimonial-item p {
   font-style: italic;
   margin: 0 0 15px 0 0 0;
   padding: 0;
@@ -1658,7 +1668,7 @@ section {
 }
 
 .contact .info-item p {
-  padding: 0;
+  padding: 10px;
   line-height: 24px;
   font-size: 14px;
   margin-bottom: 0;
@@ -2694,8 +2704,8 @@ section {
   object-fit: contain;
 }
 
-.img-75-width {
-  width: 75% !important;
+.img-85-width {
+  width: 85% !important;
   height: 100%;
   object-fit: contain;
 }
@@ -2714,4 +2724,57 @@ section {
 
 .product-name:hover {
   color: var(--color-primary);
+}
+
+.features-icon,
+.benefits-icon {
+  color: var(--color-primary);
+}
+
+.features-title,
+.benefits-title {
+  color: var(--color-secondary);
+}
+
+@media only screen and (max-width: 567px) {
+  .specs-table {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 568px) {
+  .specs-table-mobile {
+    display: none;
+  }
+}
+.stats-counter {
+  padding-top: 20px !important;
+  padding-bottom: 80px !important;
+}
+
+.about-comp-cards {
+  padding: 40px 0 !important;
+}
+
+.product-type {
+  padding: 5px 0 !important;
+}
+
+.icon-image {
+  width: 35% !important;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+  margin-right: 25px;
+  font-size: 28px;
+  border-radius: 4px;
+  line-height: 0;
+  box-shadow: 0px 2px 30px rgba(0, 0, 0, 0.08);
+  background-color: #fff;
+  transition: 0.3s;
+}
+
+.icon-image:hover {
+  background-color: rgba(4, 50, 146, 0.5);
+  color: #fff;
 }

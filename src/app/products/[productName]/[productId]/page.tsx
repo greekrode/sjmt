@@ -22,6 +22,11 @@ type Fnb = {
   benefits?: string;
 };
 
+type Type = {
+  name?: string;
+  img?: any;
+};
+
 type Specs = {
   tire_size: string;
   pr: string;
@@ -29,8 +34,11 @@ type Specs = {
   load_index_s?: string;
   load_index_d?: string;
   speed_rating: string;
-  approved_rim: string;
-  outer_diameter: string;
+  approved_rim?: string;
+  rim_width?: string;
+  rim_diameter?: string;
+  outer_diameter?: string;
+  overall_diameter?: string;
   tread_depth: string;
   section_width?: string;
   max_load: string;
@@ -44,7 +52,7 @@ type ProductDetailType = {
   name: string;
   img: any;
   description: string;
-  type?: string[];
+  type?: Type[];
   overview?: Overview;
   fnb?: Fnb[];
   specs?: Specs[];
@@ -58,254 +66,338 @@ const productDataMap: Record<ProductName, typeof gitiProductDataDetail> = {
   gtradial: gtrProductDataDetail,
 };
 
-const GitProductDetailTab = ({ product }: { product: ProductDetailType }) => {
+const GitiProductDetailTab = ({ product }: { product: ProductDetailType }) => {
   return (
-    <div className="row justify-content-between gy-4 mt-4">
-      <Tabs defaultActiveKey="overviews" className="mt-10 tabs">
-        <Tab eventKey="overviews" title="Overview">
-          <div className="row justify-content-between gy-4 mt-4">
-            <div className="col-lg-3">
-              <Table
-                borderless
-                style={{
-                  border: "1px solid #dee2e6",
-                }}
-              >
-                <tbody>
-                  <tr>
-                    <td>Rim Size:</td>
-                    <td>{product.overview.rim_size}</td>
-                  </tr>
-                  <tr>
-                    <td>Aspect Ratio:</td>
-                    <td>{product.overview.aspect_ratio}</td>
-                  </tr>
-                  <tr>
-                    <td>Section Width:</td>
-                    <td>{product.overview.section_width}</td>
-                  </tr>
-                  <tr>
-                    <td>Speed Rating:</td>
-                    <td>{product.overview.speed_rating}</td>
-                  </tr>
-                </tbody>
-              </Table>
-            </div>
-
-            <div className="col-lg-8">
-              <Table striped hover>
-                <thead>
-                  <tr>
-                    <td>
-                      <Row>
-                        <Col xs={4} className="h5 font-weight-bold">
-                          <i className="bi bi-trophy-fill"></i> Features
-                        </Col>
-                        <Col xs={8} className="h5 font-weight-bold">
-                          <i className="bi bi-trophy-fill"></i> Benefits
-                        </Col>
-                      </Row>
-                    </td>
-                  </tr>
-                </thead>
-                <tbody>
-                  {product.fnb.map((item) => (
-                    <tr>
-                      <td>
-                        <Row>
-                          <Col xs={3}>{item.features}</Col>
-                          <Col xs={9}>{item.benefits}</Col>
-                        </Row>
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </Table>
-            </div>
-          </div>
-        </Tab>
-        <Tab eventKey="specs" title="Specifications">
-          <div className="row justify-content-between gy-4 mt-4">
-            <div className="col-lg-12">
-              <Table bordered striped hover className="d-none d-sm-table">
-                <thead
-                  style={{
-                    fontWeight: "bold",
-                  }}
-                >
-                  <tr className="text-center align-middle">
-                    <td rowSpan={2}>Tire Size</td>
-                    <td rowSpan={2}>PR</td>
-                    <td rowSpan={2}>Load Index</td>
-                    <td rowSpan={2}>Speed Rating</td>
-                    <td rowSpan={2}>Approved Rim</td>
-                    <td rowSpan={2}>Outer Diameter (mm)</td>
-                    <td rowSpan={2}>Tread Depth (mm)</td>
-                    <td rowSpan={2}>Max Load (kg)</td>
-                    <td colSpan={2}>Max Pressure</td>
-                  </tr>
-                  <tr className="text-center">
-                    <td>kPA</td>
-                    <td>PSI</td>
-                  </tr>
-                </thead>
-                <tbody>
-                  {product.specs.map((item) => (
-                    <tr>
-                      <td>{item.tire_size}</td>
-                      <td>{item.pr}</td>
-                      <td>{item.load_index}</td>
-                      <td>{item.speed_rating}</td>
-                      <td>{item.approved_rim}</td>
-                      <td>{item.outer_diameter}</td>
-                      <td>{item.tread_depth}</td>
-                      <td>{item.max_load}</td>
-                      <td>{item.max_pressure_kpa}</td>
-                      <td>{item.max_pressure_psi}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </Table>
-            </div>
-          </div>
-
-          <Table bordered striped hover className="d-table d-sm-none">
-            <thead
-              style={{
-                fontWeight: "bold",
-              }}
+    <section id="features" className="features">
+      <div className="container" data-aos="fade-up">
+        <ul className="nav nav-tabs row g-2 d-flex">
+          <li className={`nav-item col-6`}>
+            <a
+              className={`nav-link active show`}
+              data-bs-toggle="tab"
+              data-bs-target={`#tab-0`}
             >
-              <tr className="text-center align-middle">
-                <td rowSpan={2}>Tire Size</td>
-                <td rowSpan={2}>LI</td>
-                <td rowSpan={2}>SI</td>
-              </tr>
-            </thead>
-            <tbody>
-              {product.specs.map((item) => (
-                <tr>
-                  <td>{item.tire_size}</td>
-                  <td>{item.load_index}</td>
-                  <td>{item.speed_rating}</td>
-                </tr>
-              ))}
-            </tbody>
-          </Table>
-        </Tab>
-      </Tabs>
-    </div>
+              <h4>Overview</h4>
+            </a>
+          </li>
+          <li className={`nav-item col-6`}>
+            <a
+              className={`nav-link`}
+              data-bs-toggle="tab"
+              data-bs-target={`#tab-1`}
+            >
+              <h4>Specifications</h4>
+            </a>
+          </li>
+        </ul>
+        <div className="tab-content">
+          <div className={`tab-pane active show`} id={`tab-0`} key={0}>
+            <section id="stats-counter" className="stats-counter">
+              <div className="container">
+                <div className="row gy-4">
+                  <div className="col-lg-3 col-md-6">
+                    <div className="stats-item d-flex align-items-center w-100 h-100">
+                      <i className="bi bi-arrows-angle-expand color-blue flex-shrink-0"></i>
+                      <div>
+                        <span>{product.overview?.rim_size || "0"}</span>
+                        <p>Rim Size</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-lg-3 col-md-6">
+                    <div className="stats-item d-flex align-items-center w-100 h-100">
+                      <i className="bi bi-aspect-ratio color-blue flex-shrink-0"></i>
+                      <div>
+                        <span>{product.overview?.aspect_ratio || "0"}</span>
+                        <p>Aspect Ratio</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-lg-3 col-md-6">
+                    <div className="stats-item d-flex align-items-center w-100 h-100">
+                      <i className="bi bi-arrows color-blue flex-shrink-0"></i>
+                      <div>
+                        <span>{product.overview?.section_width || "0"}</span>
+                        <p>Section Width</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-lg-3 col-md-6">
+                    <div className="stats-item d-flex align-items-center w-100 h-100">
+                      <i className="bi bi-speedometer2 color-blue flex-shrink-0"></i>
+                      <div>
+                        <span>{product.overview?.speed_rating || "-"}</span>
+                        <p>Speed Rating</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section
+              id="about-comp-cards"
+              className="about-comp-cards section-bg"
+            >
+              <div className="container" data-aos="fade-up">
+                <div className="row gy-4">
+                  <div
+                    className="col-lg-5 col-md-5"
+                    data-aos="zoom-in"
+                    data-aos-delay="100"
+                  >
+                    <h3>Features</h3>
+                    <ul className="list-unstyled">
+                      {product.fnb.map((item) => (
+                        <li>
+                          <i className="bi bi-check2"></i>{" "}
+                          <span>{item.features}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div
+                    className="col-lg-7 col-md-7"
+                    data-aos="zoom-in"
+                    data-aos-delay="200"
+                  >
+                    <h3>Benefits</h3>
+                    <ul className="list-unstyled">
+                      {product.fnb.map((item) => (
+                        <li>
+                          <i className="bi bi-check2"></i>{" "}
+                          <span>{item.benefits}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <div className={`tab-pane`} id={`tab-1`} key={1}>
+            <div className="row justify-content-between gy-4 mt-4 specs-table">
+              <div
+                className="col-lg-12"
+                style={{ maxHeight: "50vh", overflowY: "auto" }}
+              >
+                <Table bordered striped hover>
+                  <thead
+                    style={{
+                      fontWeight: "bold",
+                    }}
+                  >
+                    <tr className="text-center align-middle">
+                      <td rowSpan={2}>Tire Size</td>
+                      <td rowSpan={2}>PR</td>
+                      <td rowSpan={2}>Load Index</td>
+                      <td rowSpan={2}>Speed Rating</td>
+                      <td rowSpan={2}>Approved Rim</td>
+                      <td rowSpan={2}>Outer Diameter (mm)</td>
+                      <td rowSpan={2}>Tread Depth (mm)</td>
+                      <td rowSpan={2}>Max Load (kg)</td>
+                      <td colSpan={2}>Max Pressure</td>
+                    </tr>
+                    <tr className="text-center">
+                      <td>kPA</td>
+                      <td>PSI</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {product.specs.map((item) => (
+                      <tr>
+                        <td>{item.tire_size}</td>
+                        <td>{item.pr}</td>
+                        <td>{item.load_index}</td>
+                        <td>{item.speed_rating}</td>
+                        <td>{item.approved_rim}</td>
+                        <td>{item.outer_diameter}</td>
+                        <td>{item.tread_depth}</td>
+                        <td>{item.max_load}</td>
+                        <td>{item.max_pressure_kpa}</td>
+                        <td>{item.max_pressure_psi}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </Table>
+              </div>
+            </div>
+
+            <div className="row justify-content-between gy-4 mt-4 specs-table-mobile">
+              <div
+                className="col-lg-12"
+                style={{ maxHeight: "50vh", overflowY: "auto" }}
+              >
+                <Table bordered striped hover>
+                  <thead
+                    style={{
+                      fontWeight: "bold",
+                    }}
+                  >
+                    <tr className="text-center align-middle">
+                      <td rowSpan={2}>Tire Size</td>
+                      <td rowSpan={2}>LI</td>
+                      <td rowSpan={2}>SI</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {product.specs.map((item) => (
+                      <tr>
+                        <td>{item.tire_size}</td>
+                        <td>{item.load_index}</td>
+                        <td>{item.speed_rating}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </Table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };
 
 const GtProductDetailTab = ({ product }: { product: ProductDetailType }) => {
   return (
-    <div className="row justify-content-between gy-4 mt-4">
-      <Tabs defaultActiveKey="overviews" className="mt-10 tabs">
-        <Tab eventKey="overviews" title="Overview">
-          <div className="row justify-content-between gy-4 mt-4">
-            <div className="col-lg-8">
-              <Table striped hover>
-                <thead>
-                  <tr>
-                    <td>
-                      <Row>
-                        <Col className="h5 font-weight-bold">
-                          <i className="bi bi-trophy-fill"></i> Features and
-                          Benefits
-                        </Col>
-                      </Row>
-                    </td>
-                  </tr>
-                </thead>
-                <tbody>
-                  {product.fnb.map((item) => (
-                    <tr>
-                      <td>
-                        <Row>
-                          <Col>{item.features}</Col>
-                        </Row>
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </Table>
-            </div>
-          </div>
-        </Tab>
-        <Tab eventKey="specs" title="Specifications">
-          <div className="row justify-content-between gy-4 mt-4">
-            <div className="col-lg-12">
-              <Table bordered striped hover className="d-none d-sm-table">
-                <thead
-                  style={{
-                    fontWeight: "bold",
-                  }}
-                >
-                  <tr className="text-center align-middle">
-                    <td rowSpan={2}>Tire Size</td>
-                    <td rowSpan={2}>PR</td>
-                    <td colSpan={2}>Load Index</td>
-                    <td rowSpan={2}>Speed Rating</td>
-                    <td rowSpan={2}>Approved Rim</td>
-                    <td rowSpan={2}>Outer Diameter (mm)</td>
-                    <td rowSpan={2}>Tread Depth (mm)</td>
-                    <td rowSpan={2}>Section Width (mm)</td>
-                    <td rowSpan={2}>Max Load (kg)</td>
-                    <td rowSpan={2}>Max Pressure (kpa)</td>
-                  </tr>
-                  <tr className="text-center">
-                    <td>S</td>
-                    <td>D</td>
-                  </tr>
-                </thead>
-                <tbody>
-                  {product.specs.map((item) => (
-                    <tr>
-                      <td>{item.tire_size}</td>
-                      <td>{item.pr}</td>
-                      <td>{item.load_index_s}</td>
-                      <td>{item.load_index_d}</td>
-                      <td>{item.speed_rating}</td>
-                      <td>{item.approved_rim}</td>
-                      <td>{item.outer_diameter}</td>
-                      <td>{item.tread_depth}</td>
-                      <td>{item.section_width}</td>
-                      <td>{item.max_load}</td>
-                      <td>{item.max_pressure}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </Table>
-            </div>
+    <section id="features" className="features">
+      <div className="container" data-aos="fade-up">
+        <ul className="nav nav-tabs row g-2 d-flex">
+          <li className={`nav-item col-6`}>
+            <a
+              className={`nav-link active show`}
+              data-bs-toggle="tab"
+              data-bs-target={`#tab-0`}
+            >
+              <h4>Overview</h4>
+            </a>
+          </li>
+          <li className={`nav-item col-6`}>
+            <a
+              className={`nav-link`}
+              data-bs-toggle="tab"
+              data-bs-target={`#tab-1`}
+            >
+              <h4>Specifications</h4>
+            </a>
+          </li>
+        </ul>
+
+        <div className="tab-content">
+          <div className={`tab-pane active show`} id={`tab-0`} key={0}>
+            <section
+              id="about-comp-cards"
+              className="about-comp-cards section-bg"
+            >
+              <div className="container" data-aos="fade-up">
+                <div className="row gy-4">
+                  <div
+                    className="col-lg-12 col-md-12"
+                    data-aos="zoom-in"
+                    data-aos-delay="100"
+                  >
+                    <h3>Features and Benefits</h3>
+                    <ul className="list-unstyled">
+                      {product.fnb.map((item) => (
+                        <li>
+                          <i className="bi bi-check2"></i>{" "}
+                          <span>{item.features}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </section>
           </div>
 
-          <Table bordered striped hover className="d-table d-sm-none">
-            <thead
-              style={{
-                fontWeight: "bold",
-              }}
-            >
-              <tr className="text-center align-middle">
-                <td rowSpan={2}>Tire Size</td>
-                <td rowSpan={2}>LI</td>
-                <td rowSpan={2}>SI</td>
-              </tr>
-            </thead>
-            <tbody>
-              {product.specs.map((item) => (
-                <tr>
-                  <td>{item.tire_size}</td>
-                  <td>
-                    {item.load_index_s} / {item.load_index_d}
-                  </td>
-                  <td>{item.speed_rating}</td>
-                </tr>
-              ))}
-            </tbody>
-          </Table>
-        </Tab>
-      </Tabs>
-    </div>
+          <div className={`tab-pane`} id={`tab-1`} key={1}>
+            <div className="row justify-content-between gy-4 mt-4 specs-table">
+              <div
+                className="col-lg-12"
+                style={{ maxHeight: "50vh", overflowY: "auto" }}
+              >
+                <Table bordered striped hover>
+                  <thead
+                    style={{
+                      fontWeight: "bold",
+                    }}
+                  >
+                    <tr className="text-center align-middle">
+                      <td rowSpan={2}>Tire Size</td>
+                      <td rowSpan={2}>PR</td>
+                      <td colSpan={2}>Load Index</td>
+                      <td rowSpan={2}>Speed Rating</td>
+                      <td rowSpan={2}>Approved Rim</td>
+                      <td rowSpan={2}>Outer Diameter (mm)</td>
+                      <td rowSpan={2}>Tread Depth (mm)</td>
+                      <td rowSpan={2}>Section Width (mm)</td>
+                      <td rowSpan={2}>Max Load (kg)</td>
+                      <td rowSpan={2}>Max Pressure (kpa)</td>
+                    </tr>
+                    <tr className="text-center">
+                      <td>S</td>
+                      <td>D</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {product.specs.map((item) => (
+                      <tr>
+                        <td>{item.tire_size}</td>
+                        <td>{item.pr}</td>
+                        <td>{item.load_index_s}</td>
+                        <td>{item.load_index_d}</td>
+                        <td>{item.speed_rating}</td>
+                        <td>{item.approved_rim}</td>
+                        <td>{item.outer_diameter}</td>
+                        <td>{item.tread_depth}</td>
+                        <td>{item.section_width}</td>
+                        <td>{item.max_load}</td>
+                        <td>{item.max_pressure}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </Table>
+              </div>
+            </div>
+
+            <div className="row justify-content-between gy-4 mt-4 specs-table-mobile">
+              <div
+                className="col-lg-12"
+                style={{ maxHeight: "50vh", overflowY: "auto" }}
+              >
+                <Table bordered striped hover>
+                  <thead
+                    style={{
+                      fontWeight: "bold",
+                    }}
+                  >
+                    <tr className="text-center align-middle">
+                      <td rowSpan={2}>Tire Size</td>
+                      <td rowSpan={2}>LI</td>
+                      <td rowSpan={2}>SI</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {product.specs.map((item) => (
+                      <tr>
+                        <td>{item.tire_size}</td>
+                        <td>
+                          {item.load_index_s} / {item.load_index_d}
+                        </td>
+                        <td>{item.speed_rating}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </Table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };
 
@@ -315,142 +407,195 @@ const GtRadialProductDetailTab = ({
   product: ProductDetailType;
 }) => {
   return (
-    <div className="row justify-content-between gy-4 mt-4">
-      <Tabs defaultActiveKey="overviews" className="mt-10 tabs">
-        <Tab eventKey="overviews" title="Overview">
-          <div className="row justify-content-between gy-4 mt-4">
-            <div className="col-lg-3">
-              <Table
-                borderless
-                style={{
-                  border: "1px solid #dee2e6",
-                }}
-              >
-                <tbody>
-                  <tr>
-                    <td>Rim Size:</td>
-                    <td>{product.overview.rim_size}</td>
-                  </tr>
-                  <tr>
-                    <td>Aspect Ratio:</td>
-                    <td>{product.overview.aspect_ratio}</td>
-                  </tr>
-                  <tr>
-                    <td>Section Width:</td>
-                    <td>{product.overview.section_width}</td>
-                  </tr>
-                  <tr>
-                    <td>Speed Rating:</td>
-                    <td>{product.overview.speed_rating}</td>
-                  </tr>
-                </tbody>
-              </Table>
-            </div>
-
-            <div className="col-lg-8">
-              <Table striped hover>
-                <thead>
-                  <tr>
-                    <td>
-                      <Row>
-                        <Col xs={3} className="h5 font-weight-bold">
-                          <i className="bi bi-trophy-fill"></i> Features
-                        </Col>
-                        <Col xs={9} className="h5 font-weight-bold">
-                          <i className="bi bi-trophy-fill"></i> Benefits
-                        </Col>
-                      </Row>
-                    </td>
-                  </tr>
-                </thead>
-                <tbody>
-                  {product.fnb.map((item) => (
-                    <tr>
-                      <td>
-                        <Row>
-                          <Col xs={3}>{item.features}</Col>
-                          <Col xs={9}>{item.benefits}</Col>
-                        </Row>
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </Table>
-            </div>
-          </div>
-        </Tab>
-        <Tab eventKey="specs" title="Specifications">
-          <div className="row justify-content-between gy-4 mt-4">
-            <div className="col-lg-12">
-              <Table bordered striped hover className="d-none d-sm-table">
-                <thead
-                  style={{
-                    fontWeight: "bold",
-                  }}
-                >
-                  <tr className="text-center align-middle">
-                    <td rowSpan={2}>Tire Size</td>
-                    <td rowSpan={2}>Load Index</td>
-                    <td rowSpan={2}>Speed Rating</td>
-                    <td rowSpan={2}>Approved Rim</td>
-                    <td rowSpan={2}>Outer Diameter (mm)</td>
-                    <td rowSpan={2}>Tread Depth (mm)</td>
-                    <td rowSpan={2}>Section Width (mm)</td>
-                    <td rowSpan={2}>Max Load (kg)</td>
-                  </tr>
-                  <tr className="text-center">
-                    <td>S</td>
-                    <td>D</td>
-                  </tr>
-                </thead>
-                <tbody>
-                  {product.specs.map((item) => (
-                    <tr>
-                      <td>{item.tire_size}</td>
-                      <td>{item.load_index}</td>
-                      <td>{item.speed_rating}</td>
-                      <td>{item.approved_rim}</td>
-                      <td>{item.outer_diameter}</td>
-                      <td>{item.tread_depth}</td>
-                      <td>{item.section_width}</td>
-                      <td>{item.max_load}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </Table>
-            </div>
-          </div>
-
-          <Table bordered striped hover className="d-table d-sm-none">
-            <thead
-              style={{
-                fontWeight: "bold",
-              }}
+    <section id="features" className="features">
+      <div className="container" data-aos="fade-up">
+        <ul className="nav nav-tabs row g-2 d-flex">
+          <li className={`nav-item col-6`}>
+            <a
+              className={`nav-link active show`}
+              data-bs-toggle="tab"
+              data-bs-target={`#tab-0`}
             >
-              <tr className="text-center align-middle">
-                <td rowSpan={2}>Tire Size</td>
-                <td rowSpan={2}>LI</td>
-                <td rowSpan={2}>SI</td>
-              </tr>
-            </thead>
-            <tbody>
-              {product.specs.map((item) => (
-                <tr>
-                  <td>{item.tire_size}</td>
-                  <td>{item.load_index}</td>
-                  <td>{item.speed_rating}</td>
-                </tr>
-              ))}
-            </tbody>
-          </Table>
-        </Tab>
-      </Tabs>
-    </div>
+              <h4>Overview</h4>
+            </a>
+          </li>
+          <li className={`nav-item col-6`}>
+            <a
+              className={`nav-link`}
+              data-bs-toggle="tab"
+              data-bs-target={`#tab-1`}
+            >
+              <h4>Specifications</h4>
+            </a>
+          </li>
+        </ul>
+
+        <div className="tab-content">
+          <div className={`tab-pane active show`} id={`tab-0`} key={0}>
+            <section id="stats-counter" className="stats-counter">
+              <div className="container">
+                <div className="row gy-4">
+                  <div className="col-lg-3 col-md-6">
+                    <div className="stats-item d-flex align-items-center w-100 h-100">
+                      <i className="bi bi-arrows-angle-expand color-blue flex-shrink-0"></i>
+                      <div>
+                        <span>{product.overview?.rim_size}</span>
+                        <p>Rim Size</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-lg-3 col-md-6">
+                    <div className="stats-item d-flex align-items-center w-100 h-100">
+                      <i className="bi bi-aspect-ratio color-blue flex-shrink-0"></i>
+                      <div>
+                        <span>{product.overview?.aspect_ratio}</span>
+                        <p>Aspect Ratio</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-lg-3 col-md-6">
+                    <div className="stats-item d-flex align-items-center w-100 h-100">
+                      <i className="bi bi-arrows color-blue flex-shrink-0"></i>
+                      <div>
+                        <span>{product.overview?.section_width}</span>
+                        <p>Section Width</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-lg-3 col-md-6">
+                    <div className="stats-item d-flex align-items-center w-100 h-100">
+                      <i className="bi bi-speedometer2 color-blue flex-shrink-0"></i>
+                      <div>
+                        <span>{product.overview?.speed_rating}</span>
+                        <p>Speed Rating</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section
+              id="about-comp-cards"
+              className="about-comp-cards section-bg"
+            >
+              <div className="container" data-aos="fade-up">
+                <div className="row gy-4">
+                  <div
+                    className="col-lg-5 col-md-5"
+                    data-aos="zoom-in"
+                    data-aos-delay="100"
+                  >
+                    <h3>Features</h3>
+                    <ul className="list-unstyled">
+                      {product.fnb.map((item) => (
+                        <li>
+                          <i className="bi bi-check2"></i>{" "}
+                          <span>{item.features}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div
+                    className="col-lg-7 col-md-7"
+                    data-aos="zoom-in"
+                    data-aos-delay="200"
+                  >
+                    <h3>Benefits</h3>
+                    <ul className="list-unstyled">
+                      {product.fnb.map((item) => (
+                        <li>
+                          <i className="bi bi-check2"></i>{" "}
+                          <span>{item.benefits}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+          <div className={`tab-pane`} id={`tab-1`} key={1}>
+            <div className="row justify-content-between gy-4 mt-4 specs-table">
+              <div
+                className="col-lg-12"
+                style={{ maxHeight: "50vh", overflowY: "auto" }}
+              >
+                <Table bordered striped hover>
+                  <thead
+                    style={{
+                      fontWeight: "bold",
+                    }}
+                  >
+                    <tr className="text-center align-middle">
+                      <td rowSpan={2}>Tire Size</td>
+                      <td rowSpan={2}>Load Index</td>
+                      <td rowSpan={2}>Speed Rating</td>
+                      <td rowSpan={2}>Rim Width (inch)</td>
+                      <td rowSpan={2}>Rim Diameter (inch)</td>
+                      <td rowSpan={2}>Overall Diameter (mm)</td>
+                      <td rowSpan={2}>Tread Depth (mm)</td>
+                      <td rowSpan={2}>Section Width (mm)</td>
+                      <td rowSpan={2}>Max Load (kg)</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {product.specs.map((item) => (
+                      <tr>
+                        <td>{item.tire_size}</td>
+                        <td>{item.load_index}</td>
+                        <td>{item.speed_rating}</td>
+                        <td>{item.rim_width}</td>
+                        <td>{item.rim_diameter}</td>
+                        <td>{item.overall_diameter}</td>
+                        <td>{item.tread_depth}</td>
+                        <td>{item.section_width}</td>
+                        <td>{item.max_load}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </Table>
+              </div>
+            </div>
+
+            <div className="row justify-content-between gy-4 mt-4 specs-table-mobile">
+              <div
+                className="col-lg-12"
+                style={{ maxHeight: "30vh", overflowY: "auto" }}
+              >
+                <Table bordered striped hover>
+                  <thead
+                    style={{
+                      fontWeight: "bold",
+                    }}
+                  >
+                    <tr className="text-center align-middle">
+                      <td rowSpan={2}>Tire Size</td>
+                      <td rowSpan={2}>LI</td>
+                      <td rowSpan={2}>SI</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {product.specs.map((item) => (
+                      <tr>
+                        <td>{item.tire_size}</td>
+                        <td>{item.load_index}</td>
+                        <td>{item.speed_rating}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </Table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };
 
 const tabComponents = {
-  giti: GitProductDetailTab,
+  giti: GitiProductDetailTab,
   gt: GtProductDetailTab,
   gtradial: GtRadialProductDetailTab,
 };
@@ -470,35 +615,49 @@ const ProductDetail = ({
   }
 
   return (
-    <section id="project-details" className="project-details">
+    <section id="product-details" className="product-details">
       <div className="container" data-aos="fade-up" data-aos-delay="100">
         <div className="row justify-content-between gy-4 mt-4">
           <div className="col-lg-8">
-            <div className="portfolio-description">
+            <div className="product-description">
               <h2>{product.name}</h2>
               <p className="display-6">{product.description}</p>
             </div>
-            <div className="mt-10">
-              <ListGroup horizontal>
-                {product.type.map((type) => (
-                  <ListGroup.Item
-                    style={{
-                      border: 0,
-                    }}
-                  >
-                    {type}
-                  </ListGroup.Item>
-                ))}
-              </ListGroup>
+            <div
+              className="d-flex flex-wrap align-items-center mt-10"
+              data-aos="fade-up"
+              data-aos-delay={200}
+            >
+              {/* <ListGroup variant="flush"> */}
+              {product.type.map((type, index) => (
+                <div
+                  key={index}
+                  className="d-flex align-items-center position-relative product-type"
+                  style={{ flex: "1 0 100%", maxWidth: "30%" }} 
+                >
+                  <Image
+                    src={type.img.default.src}
+                    alt={type.name}
+                    width={type.img.default.width}
+                    height={type.img.default.height}
+                    className="icon-image"
+                  />
+                  <p>{type.name}</p>
+                </div>
+              ))}
+              {/* </ListGroup> */}
             </div>
           </div>
 
           <div className="col-lg-3">
-            <div className="portfolio-info center-image" style={{
-              height: "35vh"
-            }}>
+            <div
+              className="product-inof center-image"
+              style={{
+                height: "35vh",
+              }}
+            >
               <Image
-                className="img-fluid img-75-width"
+                className="img-fluid img-85-width"
                 src={product.img.default.src}
                 width={product.img.default.width}
                 height={product.img.default.height}
@@ -511,6 +670,12 @@ const ProductDetail = ({
       </div>
     </section>
   );
+};
+
+const productNameMap: Record<ProductName, string> = {
+  gt: "GT",
+  giti: "GITI",
+  gtradial: "GT Radial",
 };
 
 const Page = ({
@@ -546,7 +711,7 @@ const Page = ({
               <a href="/">Home</a>
             </li>
             <li>
-              <a href="/products/giti">GITI</a>
+              <a href="./">{productNameMap[productName]}</a>
             </li>
             <li>{product.name}</li>
           </ol>

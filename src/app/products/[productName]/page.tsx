@@ -108,11 +108,11 @@ const Page = ({ params }: { params: { productName: string } }) => {
         </div>
       </div>
 
-      <section id="projects" className="projects">
+      <section id="products" className="products">
         <div className="container" data-aos="fade-up">
           <div>
             <ul
-              className="product-flters"
+              className="product-filters"
               data-aos="fade-up"
               data-aos-delay="100"
             >

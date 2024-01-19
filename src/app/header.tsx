@@ -1,5 +1,5 @@
 "use client";
-import React, { MouseEventHandler, useState } from "react";
+import React, { MouseEventHandler, useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 
 interface HeaderProps {
@@ -12,6 +12,23 @@ const Header: React.FC<HeaderProps> = ({
   toggleMobileNav,
 }) => {
   const [activeDropdown, setActiveDropdown] = useState<number | null>(null);
+  const headerRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 300) {
+        headerRef.current?.classList.add("header-scrolled");
+      } else {
+        headerRef.current?.classList.remove("header-scrolled");
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const handleNavLinkClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
     const hash = event.currentTarget.hash;
@@ -34,7 +51,11 @@ const Header: React.FC<HeaderProps> = ({
 
   return (
     <>
-      <header id="header" className="header d-flex align-items-center">
+      <header
+        id="header"
+        className="header d-flex align-items-center"
+        ref={headerRef}
+      >
         <div className="container-fluid container-xl d-flex align-items-center justify-content-between">
           <a href="/" className="logo d-flex align-items-center">
             <h1>

@@ -156,7 +156,7 @@ const Page = () => {
                   </div>
                 </div>
                 <div className="text-center">
-                  <button type="submit">Send Message</button>
+                  <button type="submit">Send Whatsapp</button>
                 </div>
               </form>
             </div>

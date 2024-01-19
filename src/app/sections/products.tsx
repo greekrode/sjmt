@@ -5,7 +5,7 @@ import Link from "next/link";
 const Products = () => {
   return (
     <>
-      <section id="products" className="projects">
+      <section id="products" className="products">
         <div className="container" data-aos="fade-up">
           <div className="section-header">
             <h2>Our Products</h2>
@@ -30,7 +30,7 @@ const Products = () => {
             data-portfolio-sort="original-order"
           >
             <ul
-              className="product-flters"
+              className="product-filters"
               data-aos="fade-up"
               data-aos-delay="100"
             ></ul>

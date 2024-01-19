@@ -18,7 +18,11 @@ const Footer = () => {
                     Jakarta Barat, 11140
                     <br />
                     <br />
-                    {/* <strong>Phone:</strong> +1 5589 55488 55 */}
+                    <strong>Phone:</strong> +6221 2263 1485
+                    <br />
+                    <strong>Phone:</strong> +6221 2263 6685
+                    <br />
+                    <strong>Whatsapp:</strong> +62818 0280 3970
                     <br />
                     <strong>Email:</strong> contact@sjmt.com
                     <br />
@@ -42,12 +46,6 @@ const Footer = () => {
                     >
                       <i className="bi bi-instagram"></i>
                     </a>
-                    <a
-                      href="#"
-                      className="d-flex align-items-center justify-content-center"
-                    >
-                      <i className="bi bi-linkedin"></i>
-                    </a>
                   </div>
                 </div>
               </div>
@@ -56,19 +54,27 @@ const Footer = () => {
                 <h4>Useful Links</h4>
                 <ul>
                   <li>
-                    <a href="#">Home</a>
+                    <a href="/">Home</a>
                   </li>
                   <li>
-                    <a href="#">About us</a>
+                    <a href="/about">About us</a>
                   </li>
                   <li>
-                    <a href="#">Services</a>
+                    <a href="/contact">Contact Us</a>
+                  </li>
+                </ul>
+              </div>
+              <div className="col-lg-2 col-md-3 footer-links">
+                <h4>Products</h4>
+                <ul>
+                  <li>
+                    <a href="/products/giti">GITI</a>
                   </li>
                   <li>
-                    <a href="#">Terms of service</a>
+                    <a href="/products/gt">GT</a>
                   </li>
                   <li>
-                    <a href="#">Privacy policy</a>
+                    <a href="/products/gtradial">GT Radial</a>
                   </li>
                 </ul>
               </div>
@@ -79,9 +85,9 @@ const Footer = () => {
         <div className="footer-legal text-center position-relative">
           <div className="container">
             <div className="copyright">
-              &copy; Copyright{" "}
+              Copyright &copy; 2024{" "}
               <strong>
-                <span>PT SJMT</span>
+                <span>Suryajaya Muliatama (SJMT)</span>
               </strong>
               . All Rights Reserved
             </div>

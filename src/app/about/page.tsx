@@ -1,6 +1,7 @@
 import React from "react";
 import bgImg from "../assets/img/breadcrumbs-bg.jpg";
 import aboutImg from "../assets/img/about.jpg";
+import Link from "next/link";
 
 const Page = () => {
   return (
@@ -76,14 +77,63 @@ const Page = () => {
                 </ul>
                 <div className="watch-video d-flex align-items-center position-relative">
                   <i className="bi bi-play-circle"></i>
-                  <a
+                  <Link
                     href="https://www.youtube.com/watch?v=LXb3EKWsInQ"
                     className="glightbox stretched-link"
+                    target="_blank"
                   >
                     Watch Video
-                  </a>
+                  </Link>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about-comp-cards" className="about-comp-cards section-bg">
+        <div className="container" data-aos="fade-up">
+          <div className="row gy-4">
+            <div
+              className="col-lg-6 col-md-6"
+              data-aos="zoom-in"
+              data-aos-delay="100"
+            >
+              <h3>Service Commitment</h3>
+              <p>
+                For <strong>PT. Surya Jaya Muliatama</strong>,
+                customers/partners are one of our top priorities. The company
+                was established on the basis of a commitment to service
+                excellence. We strive to understand the needs of customers and
+                respond to every request proactively.
+              </p>
+              <br />
+              <p>
+                By prioritizing customer satisfaction, we ensure customers
+                receive quality products and the best service.
+              </p>
+            </div>
+
+            <div
+              className="col-lg-6 col-md-6"
+              data-aos="zoom-in"
+              data-aos-delay="200"
+            >
+              <h3>Connected and Trustworthy</h3>
+              <p>
+                Connected and Trustworthy are two main goals of PT. Surya Jaya
+                Muliatama to become a leading company in the automotive
+                industry. Our commitment to quality and service is the
+                foundation for building a tradition of excellence and providing
+                added value for customers.
+              </p>
+              <br />
+              <p>
+                SJMT believes, to realize this, hard work and relentless effort
+                are required. For that, over the years we have continued to
+                develop a reputation as a company that prioritizes quality and
+                the best service.
+              </p>
             </div>
           </div>
         </div>
