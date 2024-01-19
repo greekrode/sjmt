@@ -19,6 +19,7 @@
     "react-flip-toolkit": "^7.1.0",
     "react-spring": "^9.7.3",
     "react-use": "^17.4.2",
+    "sharp": "^0.33.2",
     "swiper": "^11.0.5"
   },
   "devDependencies": {
