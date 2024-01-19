@@ -17,7 +17,7 @@ const Services = () => {
               data-aos-delay="100"
             ></div>
 
-            <div className="col-lg-5 d-flex flex-column justify-content-center">
+            <div className="col-lg-5 d-flex flex-column justify-content-center p-3">
               <h3>Why Us?</h3>
               <p></p>
 

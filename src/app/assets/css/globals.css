@@ -87,10 +87,47 @@ section {
   display: inline-block;
 }
 
-@media only screen and (max-width: 567px) {
+@media only screen and (max-width: 576px) {
+  .want-to-know-more {
+    display: none !important;
+  }
+
   .section-header h2:before,
   .section-header h2:after {
-    display: none;
+    display: none !important;
+  }
+
+  .hero .info h2 {
+    font-size: 24px !important;
+  }
+
+  .hero .info p {
+    font-size: 14px !important;
+    margin-bottom: 10px !important;
+  }
+
+  .hero .info .btn-get-started {
+    font-size: 12px !important;
+  }
+}
+
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  .want-to-know-more {
+    display: none !important;
+  }
+
+  .section-header h2:before,
+  .section-header h2:after {
+    display: none !important;
+  }
+
+  .hero .info p {
+    font-size: 18px !important;
+    margin-bottom: 20px !important;
+  }
+
+  .hero .info .btn-get-started {
+    font-size: 14px !important;
   }
 }
 

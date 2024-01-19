@@ -8,7 +8,7 @@ const Warehouses = () => {
         <div className="container" data-aos="fade-up">
           <div className="section-header">
             <h2>Sales Distributions</h2>
-            <p>
+            <p className="mt-3">
               Expanding Reach with Quality Tires: Comprehensive Distribution
               Across The Entire Region
             </p>

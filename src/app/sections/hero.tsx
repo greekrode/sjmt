@@ -21,7 +21,7 @@ const Hero = () => {
                   data-aos="fade-up"
                   data-aos-delay="200"
                   href="#warehouses"
-                  className="btn-get-started"
+                  className="btn-get-started want-to-know-more"
                 >
                   Want to Know More?
                 </a>

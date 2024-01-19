@@ -6,11 +6,11 @@ import Image from "next/image";
 const Products = () => {
   return (
     <>
-      <section id="products" className="products">
+      <section id="products" className="products p-2">
         <div className="container" data-aos="fade-up">
           <div className="section-header">
             <h2>Our Products</h2>
-            <p>
+            <p className="mt-5">
               We distributes several brands of tires, such as GT Radial, Gajah
               Tunngal, and Giti. We also offer a wide range of quality car,
               truck, and off-road tires, such as TBR and OTR. For PCR, LTR, and
