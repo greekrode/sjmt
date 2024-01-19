@@ -1,5 +1,5 @@
 import React from "react";
-import Constructions from "./sections/constructions";
+import Warehouses from "./sections/warehouses";
 import Services from "./sections/services";
 import Products from "./sections/products";
 import Hero from "./sections/hero";
@@ -10,7 +10,7 @@ const Page = () => {
   return (
     <>
       <Hero />
-      <Constructions />
+      <Warehouses />
       <Services />
       <Products />
       <Teams />

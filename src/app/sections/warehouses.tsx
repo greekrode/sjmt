@@ -1,10 +1,10 @@
 import React from "react";
-import { constructionData } from "../data";
+import { warehouseData } from "../data";
 
-const Constructions = () => {
+const Warehouses = () => {
   return (
     <>
-      <section id="constructions" className="constructions">
+      <section id="warehouses" className="warehouses">
         <div className="container" data-aos="fade-up">
           <div className="section-header">
             <h2>Sales Distributions</h2>
@@ -15,7 +15,7 @@ const Constructions = () => {
           </div>
 
           <div className="row gy-4">
-            {constructionData.map((item, index) => (
+            {warehouseData.map((item, index) => (
               <div
                 className="col-lg-6"
                 data-aos="fade-up"
@@ -48,4 +48,4 @@ const Constructions = () => {
   );
 };
 
-export default Constructions;
+export default Warehouses;

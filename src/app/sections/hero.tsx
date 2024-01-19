@@ -20,7 +20,7 @@ const Hero = () => {
                 <a
                   data-aos="fade-up"
                   data-aos-delay="200"
-                  href="#constructions"
+                  href="#warehouses"
                   className="btn-get-started"
                 >
                   Want to Know More?

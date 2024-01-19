@@ -1,6 +1,8 @@
 "use client";
 import React, { MouseEventHandler, useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
+import logoImg from "./assets/img/logo.png";
+import Image from "next/image";
 
 interface HeaderProps {
   isMobileNavActive: boolean;
@@ -58,6 +60,13 @@ const Header: React.FC<HeaderProps> = ({
       >
         <div className="container-fluid container-xl d-flex align-items-center justify-content-between">
           <a href="/" className="logo d-flex align-items-center">
+            <Image
+              src={logoImg.src}
+              alt=""
+              width={logoImg.width}
+              height={logoImg.height}
+              style={{ maxWidth: "5%" }}
+            />
             <h1>
               SJMT<span>.</span>
             </h1>

@@ -1,6 +1,6 @@
 import React from "react";
 import bgImg from "../assets/img/breadcrumbs-bg.jpg";
-import aboutImg from "../assets/img/about.jpg";
+import aboutImg from "../assets/img/about.jpeg";
 import Link from "next/link";
 import { Metadata } from "next";
 

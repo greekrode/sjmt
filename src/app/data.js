@@ -1,27 +1,27 @@
-export const constructionData = [
+export const warehouseData = [
   {
-    img: require("./assets/img/constructions-1.jpg"),
-    title: "West Java Warehouse - Cikarang",
+    img: require("./assets/img/warehouses/daan_mogot.jpeg"),
+    title: "West Jakarta - Daan Mogot",
     delay: "100",
   },
   {
-    img: require("./assets/img/constructions-2.jpg"),
-    title: "Kalimantan Warehouse - Samarinda",
+    img: require("./assets/img/warehouses/lahat.jpeg"),
+    title: "South Sumatra - Lahat",
     delay: "200",
   },
   {
-    img: require("./assets/img/constructions-3.jpg"),
-    title: "Kalimantan Warehouse - Tanjung",
+    img: require("./assets/img/warehouses/makassar.jpeg"),
+    title: "South Sulawesi - Makassar",
     delay: "300",
   },
   {
-    img: require("./assets/img/constructions-4.jpg"),
-    title: "Sulawesi - Kendari",
+    img: require("./assets/img/warehouses/kendari.jpeg"),
+    title: "Southeast Sulawesi - Kendari",
     delay: "400",
   },
   {
-    img: require("./assets/img/constructions-4.jpg"),
-    title: "Sulawesi - Makassar",
+    img: require("./assets/img/warehouses/ho.jpeg"),
+    title: "Central Jakarta - Head Office",
     delay: "500",
   },
 ];
