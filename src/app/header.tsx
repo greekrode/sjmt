@@ -16,7 +16,7 @@ const Header: React.FC<HeaderProps> = ({
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 300) {
+      if (window.scrollY > 100) {
         headerRef.current?.classList.add("header-scrolled");
       } else {
         headerRef.current?.classList.remove("header-scrolled");

@@ -4340,7 +4340,6 @@ export const teamsData = [
       },
       {
         img: require("./assets/img/teams/tireman_gathering_3.JPG"),
-        
       },
     ],
   },

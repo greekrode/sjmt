@@ -11,47 +11,47 @@ import {
 import ErrorPage from "next/error";
 
 type Overview = {
-  rim_size?: string;
-  aspect_ratio?: string;
-  section_width?: string;
-  speed_rating?: string;
+  rim_size?: string | null;
+  aspect_ratio?: string | null;
+  section_width?: string | null;
+  speed_rating?: string | null;
 };
 
 type Fnb = {
-  features?: string;
-  benefits?: string;
+  features?: string | null;
+  benefits?: string | null;
 };
 
 type Type = {
-  name?: string;
+  name?: string | null;
   img?: any;
 };
 
 type Specs = {
-  tire_size: string;
-  pr: string;
-  load_index?: string;
-  load_index_s?: string;
-  load_index_d?: string;
-  speed_rating: string;
-  approved_rim?: string;
-  rim_width?: string;
-  rim_diameter?: string;
-  outer_diameter?: string;
-  overall_diameter?: string;
-  tread_depth: string;
-  section_width?: string;
-  max_load: string;
-  max_pressure_kpa?: string;
-  max_pressure_psi?: string;
-  max_pressure?: string;
+  tire_size?: string | null;
+  pr?: string | null;
+  load_index?: string | null;
+  load_index_s?: string | null;
+  load_index_d?: string | null;
+  speed_rating?: string | null;
+  approved_rim?: string | null;
+  rim_width?: string | null;
+  rim_diameter?: string | null;
+  outer_diameter?: string | null;
+  overall_diameter?: string | null;
+  tread_depth?: string | null;
+  section_width?: string | null;
+  max_load?: string | null;
+  max_pressure_kpa?: string | null;
+  max_pressure_psi?: string | null;
+  max_pressure?: string | null;
 };
 
 type ProductDetailType = {
   id: number;
-  name: string;
-  img: any;
-  description: string;
+  name: string | null;
+  img?: any;
+  description?: string | null;
   type?: Type[];
   overview?: Overview;
   fnb?: Fnb[];
@@ -60,7 +60,7 @@ type ProductDetailType = {
 
 type ProductName = "giti" | "gt" | "gtradial";
 
-const productDataMap: Record<ProductName, typeof gitiProductDataDetail> = {
+const productDataMap: Record<ProductName, ProductDetailType[]> = {
   giti: gitiProductDataDetail,
   gt: gtProductDataDetail,
   gtradial: gtrProductDataDetail,
@@ -147,7 +147,7 @@ const GitiProductDetailTab = ({ product }: { product: ProductDetailType }) => {
                   >
                     <h3>Features</h3>
                     <ul className="list-unstyled">
-                      {product.fnb.map((item) => (
+                      {product.fnb?.map((item) => (
                         <li>
                           <i className="bi bi-check2"></i>{" "}
                           <span>{item.features}</span>
@@ -163,7 +163,7 @@ const GitiProductDetailTab = ({ product }: { product: ProductDetailType }) => {
                   >
                     <h3>Benefits</h3>
                     <ul className="list-unstyled">
-                      {product.fnb.map((item) => (
+                      {product.fnb?.map((item) => (
                         <li>
                           <i className="bi bi-check2"></i>{" "}
                           <span>{item.benefits}</span>
@@ -205,7 +205,7 @@ const GitiProductDetailTab = ({ product }: { product: ProductDetailType }) => {
                     </tr>
                   </thead>
                   <tbody>
-                    {product.specs.map((item) => (
+                    {product.specs?.map((item) => (
                       <tr>
                         <td>{item.tire_size}</td>
                         <td>{item.pr}</td>
@@ -242,7 +242,7 @@ const GitiProductDetailTab = ({ product }: { product: ProductDetailType }) => {
                     </tr>
                   </thead>
                   <tbody>
-                    {product.specs.map((item) => (
+                    {product.specs?.map((item) => (
                       <tr>
                         <td>{item.tire_size}</td>
                         <td>{item.load_index}</td>
@@ -300,7 +300,7 @@ const GtProductDetailTab = ({ product }: { product: ProductDetailType }) => {
                   >
                     <h3>Features and Benefits</h3>
                     <ul className="list-unstyled">
-                      {product.fnb.map((item) => (
+                      {product.fnb?.map((item) => (
                         <li>
                           <i className="bi bi-check2"></i>{" "}
                           <span>{item.features}</span>
@@ -343,7 +343,7 @@ const GtProductDetailTab = ({ product }: { product: ProductDetailType }) => {
                     </tr>
                   </thead>
                   <tbody>
-                    {product.specs.map((item) => (
+                    {product.specs?.map((item) => (
                       <tr>
                         <td>{item.tire_size}</td>
                         <td>{item.pr}</td>
@@ -381,7 +381,7 @@ const GtProductDetailTab = ({ product }: { product: ProductDetailType }) => {
                     </tr>
                   </thead>
                   <tbody>
-                    {product.specs.map((item) => (
+                    {product.specs?.map((item) => (
                       <tr>
                         <td>{item.tire_size}</td>
                         <td>
@@ -487,7 +487,7 @@ const GtRadialProductDetailTab = ({
                   >
                     <h3>Features</h3>
                     <ul className="list-unstyled">
-                      {product.fnb.map((item) => (
+                      {product.fnb?.map((item) => (
                         <li>
                           <i className="bi bi-check2"></i>{" "}
                           <span>{item.features}</span>
@@ -503,7 +503,7 @@ const GtRadialProductDetailTab = ({
                   >
                     <h3>Benefits</h3>
                     <ul className="list-unstyled">
-                      {product.fnb.map((item) => (
+                      {product.fnb?.map((item) => (
                         <li>
                           <i className="bi bi-check2"></i>{" "}
                           <span>{item.benefits}</span>
@@ -540,7 +540,7 @@ const GtRadialProductDetailTab = ({
                     </tr>
                   </thead>
                   <tbody>
-                    {product.specs.map((item) => (
+                    {product.specs?.map((item) => (
                       <tr>
                         <td>{item.tire_size}</td>
                         <td>{item.load_index}</td>
@@ -576,7 +576,7 @@ const GtRadialProductDetailTab = ({
                     </tr>
                   </thead>
                   <tbody>
-                    {product.specs.map((item) => (
+                    {product.specs?.map((item) => (
                       <tr>
                         <td>{item.tire_size}</td>
                         <td>{item.load_index}</td>
@@ -629,7 +629,7 @@ const ProductDetailInfo = ({
               data-aos-delay={200}
             >
               {/* <ListGroup variant="flush"> */}
-              {product.type.map((type, index) => (
+              {product.type?.map((type, index) => (
                 <div
                   key={index}
                   className="d-flex align-items-center position-relative product-type"
@@ -637,7 +637,7 @@ const ProductDetailInfo = ({
                 >
                   <Image
                     src={type.img.default.src}
-                    alt={type.name}
+                    alt={type.name ?? "image"}
                     width={type.img.default.width}
                     height={type.img.default.height}
                     className="icon-image"
@@ -681,7 +681,7 @@ const productNameMap: Record<ProductName, string> = {
 const ProductDetail = ({
   params,
 }: {
-  params: { productId: string; productName: string };
+  params: { productId: string | null; productName: string };
 }) => {
   const productName = params.productName as ProductName;
   const productData = productDataMap[productName] || [];
