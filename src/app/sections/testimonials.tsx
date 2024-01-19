@@ -8,6 +8,7 @@ import "swiper/css";
 import "swiper/css/autoplay";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import Image from "next/image";
 
 const Testimonials = () => {
   return (
@@ -46,11 +47,14 @@ const Testimonials = () => {
               <SwiperSlide key={index}>
                 <div className="testimonial-wrap">
                   <div className="testimonial-item">
-                    <img
+                    <Image
                       src={testimonial.img.default.src}
+                      width={testimonial.img.default.width}
+                      height={testimonial.img.default.height}
                       className="testimonial-img"
-                      alt=""
+                      alt={testimonial.name}
                     />
+
                     <h3>{testimonial.name}</h3>
                     <h4>{testimonial.position}</h4>
                     <div className="stars">

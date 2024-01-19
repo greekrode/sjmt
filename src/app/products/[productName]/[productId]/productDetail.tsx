@@ -147,8 +147,8 @@ const GitiProductDetailTab = ({ product }: { product: ProductDetailType }) => {
                   >
                     <h3>Features</h3>
                     <ul className="list-unstyled">
-                      {product.fnb?.map((item) => (
-                        <li>
+                      {product.fnb?.map((item, index) => (
+                        <li key={index}>
                           <i className="bi bi-check2"></i>{" "}
                           <span>{item.features}</span>
                         </li>
@@ -163,8 +163,8 @@ const GitiProductDetailTab = ({ product }: { product: ProductDetailType }) => {
                   >
                     <h3>Benefits</h3>
                     <ul className="list-unstyled">
-                      {product.fnb?.map((item) => (
-                        <li>
+                      {product.fnb?.map((item, index) => (
+                        <li key={index}>
                           <i className="bi bi-check2"></i>{" "}
                           <span>{item.benefits}</span>
                         </li>
@@ -205,8 +205,8 @@ const GitiProductDetailTab = ({ product }: { product: ProductDetailType }) => {
                     </tr>
                   </thead>
                   <tbody>
-                    {product.specs?.map((item) => (
-                      <tr>
+                    {product.specs?.map((item, index) => (
+                      <tr key={index}>
                         <td>{item.tire_size}</td>
                         <td>{item.pr}</td>
                         <td>{item.load_index}</td>
@@ -242,8 +242,8 @@ const GitiProductDetailTab = ({ product }: { product: ProductDetailType }) => {
                     </tr>
                   </thead>
                   <tbody>
-                    {product.specs?.map((item) => (
-                      <tr>
+                    {product.specs?.map((item, index) => (
+                      <tr key={index}>
                         <td>{item.tire_size}</td>
                         <td>{item.load_index}</td>
                         <td>{item.speed_rating}</td>
@@ -300,8 +300,8 @@ const GtProductDetailTab = ({ product }: { product: ProductDetailType }) => {
                   >
                     <h3>Features and Benefits</h3>
                     <ul className="list-unstyled">
-                      {product.fnb?.map((item) => (
-                        <li>
+                      {product.fnb?.map((item, index) => (
+                        <li key={index}>
                           <i className="bi bi-check2"></i>{" "}
                           <span>{item.features}</span>
                         </li>
@@ -343,8 +343,8 @@ const GtProductDetailTab = ({ product }: { product: ProductDetailType }) => {
                     </tr>
                   </thead>
                   <tbody>
-                    {product.specs?.map((item) => (
-                      <tr>
+                    {product.specs?.map((item, index) => (
+                      <tr key={index}>
                         <td>{item.tire_size}</td>
                         <td>{item.pr}</td>
                         <td>{item.load_index_s}</td>
@@ -381,8 +381,8 @@ const GtProductDetailTab = ({ product }: { product: ProductDetailType }) => {
                     </tr>
                   </thead>
                   <tbody>
-                    {product.specs?.map((item) => (
-                      <tr>
+                    {product.specs?.map((item, index) => (
+                      <tr key={index}>
                         <td>{item.tire_size}</td>
                         <td>
                           {item.load_index_s} / {item.load_index_d}
@@ -487,8 +487,8 @@ const GtRadialProductDetailTab = ({
                   >
                     <h3>Features</h3>
                     <ul className="list-unstyled">
-                      {product.fnb?.map((item) => (
-                        <li>
+                      {product.fnb?.map((item, index) => (
+                        <li key={index}>
                           <i className="bi bi-check2"></i>{" "}
                           <span>{item.features}</span>
                         </li>
@@ -503,8 +503,8 @@ const GtRadialProductDetailTab = ({
                   >
                     <h3>Benefits</h3>
                     <ul className="list-unstyled">
-                      {product.fnb?.map((item) => (
-                        <li>
+                      {product.fnb?.map((item, index) => (
+                        <li key={index}>
                           <i className="bi bi-check2"></i>{" "}
                           <span>{item.benefits}</span>
                         </li>
@@ -540,8 +540,8 @@ const GtRadialProductDetailTab = ({
                     </tr>
                   </thead>
                   <tbody>
-                    {product.specs?.map((item) => (
-                      <tr>
+                    {product.specs?.map((item, index) => (
+                      <tr key={index}>
                         <td>{item.tire_size}</td>
                         <td>{item.load_index}</td>
                         <td>{item.speed_rating}</td>
@@ -576,8 +576,8 @@ const GtRadialProductDetailTab = ({
                     </tr>
                   </thead>
                   <tbody>
-                    {product.specs?.map((item) => (
-                      <tr>
+                    {product.specs?.map((item, index) => (
+                      <tr key={index}>
                         <td>{item.tire_size}</td>
                         <td>{item.load_index}</td>
                         <td>{item.speed_rating}</td>

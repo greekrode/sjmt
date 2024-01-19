@@ -1,5 +1,6 @@
 import React from "react";
 import { teamsData } from "../data";
+import Image from "next/image";
 
 const Teams = () => {
   const colSize = Math.floor(12 / teamsData.length);
@@ -10,7 +11,7 @@ const Teams = () => {
         <div className="container" data-aos="fade-up">
           <ul className="nav nav-tabs row  g-2 d-flex">
             {teamsData.map((team, index) => (
-              <li className={`nav-item col-${colSize}`}>
+              <li className={`nav-item col-${colSize}`} key={index}>
                 <a
                   className={`nav-link ${index === 0 ? "active show" : ""}`}
                   data-bs-toggle="tab"
@@ -37,9 +38,11 @@ const Teams = () => {
                       data-aos-delay="200"
                       key={imgIndex}
                     >
-                      <img
+                      <Image
                         src={image.img.default.src}
-                        alt=""
+                        width={image.img.default.width}
+                        height={image.img.default.height}
+                        alt={""}
                         className="img-fluid"
                       />
                     </div>

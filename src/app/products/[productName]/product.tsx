@@ -80,6 +80,8 @@ const ProductsList = memo(
   }
 );
 
+ProductsList.displayName = "ProductsList";
+
 const Product = ({ params }: { params: { productName: string } }) => {
   const filterData =
     filterDataMap[params.productName.toLowerCase() as ProductName] || [];

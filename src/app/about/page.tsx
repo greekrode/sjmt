@@ -43,7 +43,7 @@ const Page = () => {
                 <h4>Est 2018</h4>
                 <h3>Our Story</h3>
                 <p>
-                  We are a company that's growing rapidly in car spare parts
+                  We are a company that&apos;s growing rapidly in car spare parts
                   sales trading. In the beginning, our company only has one
                   distribution warehouse for Jabodetabek area.
                 </p>
