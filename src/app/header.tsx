@@ -66,9 +66,9 @@ const Header: React.FC<HeaderProps> = ({
               alt=""
               width={logoImg.width}
               height={logoImg.height}
-              style={{ maxWidth: "5%" }}
+              className="header-logo-img"
             />
-            <h1>
+            <h1 className="ms-2">
               SJMT<span>.</span>
             </h1>
           </a>
