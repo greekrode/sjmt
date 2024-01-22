@@ -8,6 +8,10 @@ import {
 } from "../data";
 import { ProductDetailType } from "../products/[productName]/[productId]/productDetail";
 import ProductList from "./productList";
+import busTruckSearchImg1 from "../assets/img/bus_truck_search_1.png";
+import busTruckSearchImg2 from "../assets/img/bus_truck_search_2.png";
+import carSearchImg1 from "../assets/img/car_search_1.png";
+import Image from "next/image";
 
 const Search = () => {
   const distinctSectionWidths = Array.from(
@@ -278,11 +282,9 @@ const Search = () => {
                               </option>
                             ))}
                           </select>
-                        </div>
-                      </div>
-                      <div className="row gy-4">
-                        <div className="col-lg-6 form-group">
-                          <label htmlFor="wheel_pos">Wheel Position</label>
+                          <label htmlFor="wheel_pos" className="mt-3">
+                            Wheel Position
+                          </label>
                           <select
                             name="wheel_pos"
                             id="wheel_pos"
@@ -305,10 +307,25 @@ const Search = () => {
                             ))}
                           </select>
                         </div>
+                        <div className="col-lg-3 form-group search-img">
+                          <Image
+                            src={busTruckSearchImg1.src}
+                            alt=""
+                            width={busTruckSearchImg1.width}
+                            height={busTruckSearchImg1.height}
+                            className="img-fluid "
+                          />
+                        </div>
+                        <div className="col-lg-3 form-group search-img">
+                          <Image
+                            src={busTruckSearchImg2.src}
+                            alt=""
+                            width={busTruckSearchImg2.width}
+                            height={busTruckSearchImg2.height}
+                            className="img-fluid"
+                          />
+                        </div>
                       </div>
-                      {/* <div className="text-center">
-                        <button type="submit">Search</button>
-                      </div> */}
                     </form>
                   </div>
                 </div>
@@ -360,11 +377,9 @@ const Search = () => {
                               </option>
                             ))}
                           </select>
-                        </div>
-                      </div>
-                      <div className="row gy-4">
-                        <div className="col-lg-6 form-group">
-                          <label htmlFor="rim_diameter">Rim Diameter</label>
+                          <label htmlFor="rim_diameter" className="mt-3">
+                            Rim Diameter
+                          </label>
                           <select
                             name="rim_diameter"
                             id="rim_diameter"
@@ -386,6 +401,25 @@ const Search = () => {
                               </option>
                             ))}
                           </select>
+                        </div>
+                        <div className="col-lg-3 form-group search-img">
+                          <Image
+                            src={carSearchImg1.src}
+                            alt=""
+                            width={carSearchImg1.width}
+                            height={carSearchImg1.height}
+                            className="img-fluid"
+                          />
+                        </div>
+                        <div className="col-lg-3 form-group">
+                          <p>Tyre Size on Side Wall GT Tyre</p>
+                          <br />
+                          <p>
+                            <strong>IMPORTANT:</strong> Always check your
+                            owner&apos;s manual or confirm with your local tire
+                            dealer when you are selecting any tire size for your
+                            vehicle!
+                          </p>
                         </div>
                       </div>
                       {/* <div className="text-center">

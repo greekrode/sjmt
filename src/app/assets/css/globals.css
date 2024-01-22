@@ -2847,3 +2847,9 @@ section {
   border: 1px solid var(--color-default);
   cursor: not-allowed;
 }
+
+.search-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
