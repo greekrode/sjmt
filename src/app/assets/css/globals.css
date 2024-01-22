@@ -1729,6 +1729,14 @@ section {
   padding: 30px;
 }
 
+.form-control-select {
+  appearance: none;
+  background-image: url('data:image/svg+xml;charset=US-ASCII,<svg width="14" height="12" viewBox="0 0 14 12" xmlns="http://www.w3.org/2000/svg"><path d="M1 1l6 6 6-6" stroke="%23aaa" stroke-width="2" fill="none" fill-rule="evenodd"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 14px 12px;
+}
+
 .contact .php-email-form .form-group {
   padding-bottom: 20px;
 }
@@ -2831,4 +2839,11 @@ section {
 .icon-image:hover {
   background-color: rgba(4, 50, 146, 0.5);
   color: #fff;
+}
+
+.search-button:disabled {
+  background-color: var(--color-default) !important;
+  color: #fff !important;
+  border: 1px solid var(--color-default);
+  cursor: not-allowed;
 }

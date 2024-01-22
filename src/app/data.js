@@ -140,6 +140,7 @@ export const gitiProductData = [
 export const gitiProductDataDetail = [
   {
     id: 1,
+    brand: "giti",
     name: "GAO822",
     img: require("./assets/img/products/giti/GAO822.png"),
     description:
@@ -241,6 +242,7 @@ export const gitiProductDataDetail = [
   },
   {
     id: 2,
+    brand: "giti",
     name: "GAR890",
     img: require("./assets/img/products/giti/GAR890.jpg"),
     description:
@@ -320,6 +322,7 @@ export const gitiProductDataDetail = [
   },
   {
     id: 3,
+    brand: "giti",
     name: "GAZ891",
     img: require("./assets/img/products/giti/GAZ891.jpg"),
     description: "EXTENDED OPERATING LIFE ▪ BETTER TRACTION & DURABILITY",
@@ -377,6 +380,7 @@ export const gitiProductDataDetail = [
   },
   {
     id: 4,
+    brand: "giti",
     name: "GAZ892",
     img: require("./assets/img/products/giti/GAZ892.png"),
     description: "COOLER RUNNING CAPABILITIES ▪ LONGER SERVICE LIF",
@@ -470,6 +474,7 @@ export const gitiProductDataDetail = [
   },
   {
     id: 5,
+    brand: "giti",
     name: "GDM692",
     img: require("./assets/img/products/giti/GDM692.png"),
     description:
@@ -567,6 +572,7 @@ export const gitiProductDataDetail = [
   },
   {
     id: 6,
+    brand: "giti",
     name: "GSR225",
     img: require("./assets/img/products/giti/GSR225.png"),
     description: "RESIST IRREGULAR WEAR ▪ LONGER MILEAGE ▪ BETTER IN HANDLING",
@@ -686,6 +692,7 @@ export const gitiProductDataDetail = [
   },
   {
     id: 7,
+    brand: "giti",
     name: "GTR955",
     img: require("./assets/img/products/giti/GTR955.png"),
     description:
@@ -765,6 +772,7 @@ export const gitiProductDataDetail = [
   },
   {
     id: 8,
+    brand: "giti",
     name: "GT867",
     img: require("./assets/img/products/giti/GT867.jpg"),
     description: "LONGER MILEAGE ▪ HIGH DURABILITY",
@@ -908,6 +916,7 @@ export const gtProductData = [
 export const gtProductDataDetail = [
   {
     id: 1,
+    brand: "gt",
     name: "GT Lug Pro",
     img: require("./assets/img/products/gt/GT_Lug-Pro.png"),
     type: [
@@ -1033,6 +1042,7 @@ export const gtProductDataDetail = [
   },
   {
     id: 2,
+    brand: "gt",
     name: "GT Max Traction",
     img: require("./assets/img/products/gt/GT_Max_Traction.png"),
     type: [
@@ -1117,6 +1127,7 @@ export const gtProductDataDetail = [
   },
   {
     id: 3,
+    brand: "gt",
     name: "GT Miler Pro",
     img: require("./assets/img/products/gt/GT_Miler-Pro.png"),
     type: [
@@ -1219,6 +1230,7 @@ export const gtProductDataDetail = [
   },
   {
     id: 4,
+    brand: "gt",
     name: "GT Super 88N",
     img: require("./assets/img/products/gt/GT_Super-88N.png"),
     type: [
@@ -1458,6 +1470,7 @@ export const gtProductDataDetail = [
   },
   {
     id: 5,
+    brand: "gt",
     name: "GT Super 88N Super Heavy Duty",
     img: require("./assets/img/products/gt/GT_Super-88N-Super-Heavy-Duty.png"),
     type: [],
@@ -1527,6 +1540,7 @@ export const gtProductDataDetail = [
   },
   {
     id: 6,
+    brand: "gt",
     name: "GT Army Lug",
     img: require("./assets/img/products/gt/GT_Army_Lug.png"),
     type: [
@@ -1591,6 +1605,7 @@ export const gtProductDataDetail = [
   },
   {
     id: 7,
+    brand: "gt",
     name: "GT Super Traction",
     img: require("./assets/img/products/gt/GT_Super-Traction.png"),
     type: [
@@ -1702,6 +1717,7 @@ export const gtProductDataDetail = [
   },
   {
     id: 8,
+    brand: "gt",
     name: "GT Grip",
     img: require("./assets/img/products/gt/GT_Grip.png"),
     type: [
@@ -1889,6 +1905,7 @@ export const gtrProductData = [
 export const gtrProductDataDetail = [
   {
     id: 1,
+    brand: "gtradial",
     name: "Champiro Eco",
     img: require("./assets/img/products/gtradial/Champiro Eco.png"),
     description:
@@ -2035,6 +2052,7 @@ export const gtrProductDataDetail = [
   },
   {
     id: 2,
+    brand: "gtradial",
     name: "Champiro GTX Pro",
     img: require("./assets/img/products/gtradial/Champiro GTX Pro.png"),
     description:
@@ -2522,6 +2540,7 @@ export const gtrProductDataDetail = [
   },
   {
     id: 3,
+    brand: "gtradial",
     name: "Champiro HPY",
     img: require("./assets/img/products/gtradial/Champiro HPY.png"),
     description:
@@ -2889,6 +2908,7 @@ export const gtrProductDataDetail = [
   },
   {
     id: 4,
+    brand: "gtradial",
     name: "Champiro Luxe",
     img: require("./assets/img/products/gtradial/Champiro Luxe.png"),
     description:
@@ -2980,6 +3000,7 @@ export const gtrProductDataDetail = [
   },
   {
     id: 5,
+    brand: "gtradial",
     name: "Champiro SX2",
     img: require("./assets/img/products/gtradial/Champiro SX2.png"),
     description:
@@ -3192,6 +3213,7 @@ export const gtrProductDataDetail = [
   },
   {
     id: 6,
+    brand: "gtradial",
     name: "Savero A/T Plus",
     img: require("./assets/img/products/gtradial/Savero A:T Plus.png"),
     description:
@@ -3586,6 +3608,7 @@ export const gtrProductDataDetail = [
   },
   {
     id: 7,
+    brand: "gtradial",
     name: "Savero SUV",
     img: require("./assets/img/products/gtradial/Savero SUV.png"),
     description:
@@ -3871,6 +3894,7 @@ export const gtrProductDataDetail = [
   },
   {
     id: 8,
+    brand: "gtradial",
     name: "Savero M/T",
     img: require("./assets/img/products/gtradial/Savero M:T.png"),
     description:
@@ -3964,6 +3988,7 @@ export const gtrProductDataDetail = [
   },
   {
     id: 9,
+    brand: "gtradial",
     name: "Savero Komodo M/T Plus",
     img: require("./assets/img/products/gtradial/Savero Komodo M:T Plus.png"),
     description:
@@ -4128,6 +4153,7 @@ export const gtrProductDataDetail = [
   },
   {
     id: 10,
+    brand: "gtradial",
     name: "Maxmiler Pro",
     img: require("./assets/img/products/gtradial/Maxmiler Pro.png"),
     description:

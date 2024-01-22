@@ -47,7 +47,7 @@ type Specs = {
   max_pressure?: string | null;
 };
 
-type ProductDetailType = {
+export type ProductDetailType = {
   id: number;
   name: string | null;
   img?: any;
@@ -56,6 +56,7 @@ type ProductDetailType = {
   overview?: Overview;
   fnb?: Fnb[];
   specs?: Specs[];
+  brand?: string | null;
 };
 
 type ProductName = "giti" | "gt" | "gtradial";
