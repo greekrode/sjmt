@@ -1,6 +1,6 @@
 "use client";
 import bgImg from "../assets/img/breadcrumbs-bg.jpg";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import {
   gitiProductDataDetail,
   gtProductDataDetail,
@@ -14,6 +14,12 @@ import carSearchImg1 from "../assets/img/car_search_1.png";
 import Image from "next/image";
 
 const Search = () => {
+  const productListRef = useRef<HTMLDivElement>(null);
+
+  const scrollToProductList = () => {
+    productListRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
   const distinctSectionWidths = Array.from(
     new Set(
       gtrProductDataDetail.flatMap((product) =>
@@ -103,6 +109,12 @@ const Search = () => {
       setRimDiameter(savedRimDiameter);
     }
   }, []);
+
+  useEffect(() => {
+    if (filteredProducts.length > 0) {
+      scrollToProductList();
+    }
+  }, [filteredProducts]);
 
   useEffect(() => {
     if (tireSize || wheelPos) {
@@ -433,7 +445,9 @@ const Search = () => {
           </div>
         </div>
       </section>
-      <ProductList filteredProducts={filteredProducts} />
+      <div ref={productListRef}>
+        <ProductList filteredProducts={filteredProducts} />
+      </div>
     </>
   );
 };
