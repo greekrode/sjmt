@@ -1,28 +1,51 @@
 export const warehouseData = [
   {
-    img: require("./assets/img/warehouses/daan_mogot.jpeg"),
-    title: "West Jakarta - Daan Mogot",
+    img: require("./assets/img/warehouses/tanjung.jpeg"),
+    title: "South Kalimantan - Tanjung",
+    address:
+      "Jl. Jenderal A. Yani KM 11 RT. 004, Maburai, Murung Pundak, Kab. Tabalog, Kalimantan Selatan",
+    gmaps_link: "https://maps.app.goo.gl/4JXbqe9y83jPgfvt9",
     delay: "100",
   },
   {
-    img: require("./assets/img/warehouses/lahat.jpeg"),
-    title: "South Sumatra - Lahat",
+    img: require("./assets/img/warehouses/samarinda.jpeg"),
+    title: "East Kalimantan - Samarinda",
+    address:
+      "Jl. Ampera I RT.045, Rawa Makmur, Palaran, Kota Samarinda, Kalimantan Timur",
+    gmaps_link: "https://maps.app.goo.gl/4fVyMb6bd5TBwDCBA",
     delay: "200",
-  },
-  {
-    img: require("./assets/img/warehouses/makassar.jpeg"),
-    title: "South Sulawesi - Makassar",
-    delay: "300",
   },
   {
     img: require("./assets/img/warehouses/kendari.jpeg"),
     title: "Southeast Sulawesi - Kendari",
+    address:
+      "Jl. Pattimura Komplek Pergudangan Puuwatu Indah B1 RT 009 RW 003, Watulondo, Puuwatu",
+    gmaps_link: "https://maps.app.goo.gl/UuYbF2p2iYgkJwPeA",
+    delay: "300",
+  },
+  {
+    img: require("./assets/img/warehouses/lahat.jpeg"),
+    title: "South Sumatra - Lahat",
+    address:
+      "Jl. Lubuk Beringin, Desa Manggul, Lahat, Kab. Lahat, Sumatra Selatan",
+    gmaps_link: "https://maps.app.goo.gl/zrT9tQ6VRrTmv8KZ7",
     delay: "400",
   },
   {
-    img: require("./assets/img/warehouses/ho.jpeg"),
-    title: "Central Jakarta - Head Office",
+    img: require("./assets/img/warehouses/makassar.jpeg"),
+    title: "South Sulawesi - Makassar",
+    address:
+      "Jl. Ir. Sutami Kompleks Pergudangan Parangloe Indah Blok L2 No. 20, Bira, Kec. Tamalanrea, Kota Makassar, Sulawesi Selatan",
+    gmaps_link: "https://maps.app.goo.gl/dpJyE4xWCELetByu9",
     delay: "500",
+  },
+  {
+    img: require("./assets/img/warehouses/daan_mogot.jpeg"),
+    title: "West Jakarta - Daan Mogot",
+    address:
+      "Jl. Raya Daan Mogot No.156, RT.12/RW.13, Cengkareng Tim., Kecamatan Cengkareng, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta, 11730",
+    gmaps_link: "https://maps.app.goo.gl/fAjYgQZzzEQMUy4L8",
+    delay: "600",
   },
 ];
 
@@ -4394,6 +4417,20 @@ export const teamsData = [
       },
       {
         img: require("./assets/img/teams/tire_engineer_3.jpg"),
+      },
+    ],
+  },
+  {
+    name: "Truck Mobile Service",
+    images: [
+      {
+        img: require("./assets/img/teams/truck_service_1.jpeg"),
+      },
+      {
+        img: require("./assets/img/teams/truck_service_2.jpeg"),
+      },
+      {
+        img: require("./assets/img/teams/truck_service_3.jpeg"),
       },
     ],
   },

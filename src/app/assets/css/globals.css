@@ -2853,3 +2853,9 @@ section {
   justify-content: center;
   align-items: center;
 }
+
+.teams-tab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

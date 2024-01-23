@@ -33,7 +33,7 @@ const Teams = () => {
                 <div className="row">
                   {team.images.map((image, imgIndex) => (
                     <div
-                      className="col-lg-4 order-1 order-lg-2 text-center"
+                      className="col-lg-4 order-1 order-lg-2 text-center teams-tab"
                       data-aos="fade-up"
                       data-aos-delay="200"
                       key={imgIndex}

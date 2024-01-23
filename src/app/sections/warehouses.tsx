@@ -35,6 +35,12 @@ const Warehouses = () => {
                     <div className="col-xl-7 d-flex align-items-center">
                       <div className="card-body">
                         <h4 className="card-title">{item.title}</h4>
+                        <p>{item.address}</p>
+                        <br />
+                        <a href={item.gmaps_link} target="_blank">
+                          <i className="bi bi-geo-alt-fill mr-3"></i>
+                          Maps Location
+                        </a>
                       </div>
                     </div>
                   </div>
