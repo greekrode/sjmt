@@ -47,6 +47,14 @@ export const warehouseData = [
     gmaps_link: "https://maps.app.goo.gl/fAjYgQZzzEQMUy4L8",
     delay: "600",
   },
+  {
+    img: require("./assets/img/warehouses/cikarang.jpeg"),
+    title: "West Java - Cikarang",
+    address:
+      "Delta Silicon 11 Jl. Kranji F3/06, Cibatu, Cikarang Selatan, Kab. Bekasi, Jawa Barat",
+    gmaps_link: "https://maps.app.goo.gl/tKn1VmFZnWKRycCz6",
+    delay: "700",
+  },
 ];
 
 export const servicesData = [
