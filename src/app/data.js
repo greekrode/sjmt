@@ -1973,7 +1973,8 @@ export const gtProductDataDetail = [
         img: require("./assets/img/products/gt/icon/lct_driveposition.png"),
       },
     ],
-    description: "Tires for light trucks operated on off-road, suitable for clay, muddy and rocky conditions. Excellent traction capability.",
+    description:
+      "Tires for light trucks operated on off-road, suitable for clay, muddy and rocky conditions. Excellent traction capability.",
     fnb: [
       {
         features: "The tread pattern is unique and versatile.",
@@ -2075,7 +2076,8 @@ export const gtProductDataDetail = [
         img: require("./assets/img/products/gt/icon/ldt_driveposition.png"),
       },
     ],
-    description: "Specially designed for logging, mining and construction works",
+    description:
+      "Specially designed for logging, mining and construction works",
     fnb: [
       {
         features: "Directional inter-lock lug pattern design",
@@ -2298,7 +2300,8 @@ export const gtProductDataDetail = [
         img: require("./assets/img/products/gt/icon/g_allposition.png"),
       },
     ],
-    description: "Specially designed to handle all kinds of tough jobs anywhere",
+    description:
+      "Specially designed to handle all kinds of tough jobs anywhere",
     fnb: [
       {
         features: "Zig-zag grooves",
@@ -6063,6 +6066,173 @@ export const teamsData = [
       },
       {
         img: require("./assets/img/teams/truck_service_3.jpeg"),
+      },
+    ],
+  },
+];
+
+export const careerData = [
+  {
+    id: 1,
+    icon: "fa-screwdriver-wrench",
+    name: "Mechanic",
+    team: "Manufacture",
+    work_time: "Full Time - Work From Office",
+    edu: "Minimum SMA/SMK",
+    yoe: "1 - 3",
+    skills: [
+      {
+        name: "Mechanic",
+      },
+      {
+        name: "Automotive Engineering",
+      },
+      {
+        name: "Mechanical Engineering",
+      },
+    ],
+    qualifications: [
+      {
+        name: "SMK/Equivalent graduate in automotive major",
+      },
+      {
+        name: "Has experience as a car mechanic",
+      },
+      {
+        name: "Can drive a car and has SIM A",
+      },
+      {
+        name: "Honest, disciplined, and willing to learn",
+      },
+      {
+        name: "Placement in Cakung branch, Jakarta Timur",
+      },
+    ],
+  },
+  {
+    id: 2,
+    icon: "fa-money-bills",
+    name: "Sales",
+    team: "Business Development and Sales",
+    work_time: "Full Time - Work From Office",
+    edu: "Minimum Diploma (D1 - D4)",
+    yoe: "1 - 3",
+    skills: [
+      {
+        name: "Automotive Engineering",
+      },
+      {
+        name: "B2C Sales",
+      },
+      {
+        name: "Sales Management",
+      },
+    ],
+    job_desc: [
+      {
+        name: "Promote and market high quality tire products to consumers in the mining, plantation, transportasion and logistics industries",
+      },
+      {
+        name: "Achieve company sales targets that have been determined together with management",
+      },
+      {
+        name: "Maintain good relationship with existing consumers/clients, as well as expanding business networks and build relationship with new consumers/clients",
+      },
+      {
+        name: "Anaalyze market information and potential business oppportunities to develop innovative, creative, competitive and profitable sales strategies",
+      },
+      {
+        name: "Maintain confidentiality of all clients/consumers projects",
+      },
+      {
+        name: "Follow up the sales agreement process up to the payment process",
+      },
+      {
+        name: "Make periodic marketing and sales activity reports",
+      },
+      {
+        name: "Look for new customers according to the existing database",
+      },
+    ],
+    qualifications: [
+      {
+        name: "Has experience in the same field; sales in automotive spare parts",
+      },
+      {
+        name: "Has good understanding of the world of automotive B2B, Tube, Tire (4 wheels)",
+      },
+      {
+        name: "Has knowledge in the field of tires, especially for industrial tires, such as dump trucks, forklifts, and heavy equipment",
+      },
+      {
+        name: "Has experience working as sales in factories, heavy equpiment companies, industrial tire companies, and mining companies",
+      },
+      {
+        name: "Has a good networking, especially in the business circle of heavy equpiment, mining, plantations/forestry, transportasion, and logistics",
+      },
+      {
+        name: "Has good integrity, good working attitude, commitment, and good loyalty",
+      },
+      {
+        name: "Has good communication skills, interpersonal relations, presentation, and negotiation",
+      },
+      {
+        name: "Has SIM A",
+      },
+      {
+        name: "Willing to travel out of town",
+      },
+      {
+        name: "Placement in Taman Sari - Jakarta Barat",
+      },
+    ],
+  },
+  {
+    id: 3,
+    name: "Driver",
+    icon: "fa-car-side",
+    team: "Supply Chain and Logistics",
+    work_time: "Full Time - Work From Office",
+    edu: "Minimum SMA/SMK",
+    yoe: "Less than 1",
+    skills: [
+      {
+        name: "Interpersonal Skills",
+      },
+      {
+        name: "Google Maps",
+      },
+      {
+        name: "Communication Skills",
+      },
+    ],
+    qualifications: [
+      {
+        name: "Male (max. age 30 years old)",
+      },
+      {
+        name: "Minimum education of SMA",
+      },
+      {
+        name: "Has SIM A and SIM C",
+      },
+      {
+        name: "Able to drive automatic and manual cars",
+      },
+      {
+        name: "Live in Jakarta Barat, Jakarta Utara and Jakarta Pusat",
+      },
+      {
+        name: "Has a good attitude, honest, polite and able to communicate well",
+      },
+      {
+        name: "Willing to work overtime (if necessary)",
+      },
+      {
+        name: "Able to use Google Maps well",
+      },
+      {
+        name: "Placement: Taman Sari - Jakarta Barat",
       },
     ],
   },

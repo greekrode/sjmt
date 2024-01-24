@@ -1626,13 +1626,13 @@ section {
 /*--------------------------------------------------------------
 # Service Details Section
 --------------------------------------------------------------*/
-.service-details .services-list {
+.career-details .services-list {
   padding: 10px 30px;
   border: 1px solid #d5d7da;
   margin-bottom: 20px;
 }
 
-.service-details .services-list a {
+.career-details .services-list a {
   display: block;
   line-height: 1;
   padding: 8px 0 8px 15px;
@@ -1642,49 +1642,53 @@ section {
   transition: 0.3s;
 }
 
-.service-details .services-list a.active {
+.career-details .services-list a.active {
   font-weight: 700;
   border-color: var(--color-primary);
 }
 
-.service-details .services-list a:hover {
+.career-details .services-list a:hover {
   border-color: var(--color-primary);
 }
 
-.service-details .services-img {
+.career-details .services-img {
   margin-bottom: 20px;
 }
 
-.service-details h3 {
+.career-details h3 {
   font-size: 28px;
   font-weight: 700;
 }
 
-.service-details h4 {
+.career-details h4 {
   font-size: 20px;
   font-weight: 700;
 }
 
-.service-details p {
+.career-details p {
   font-size: 15px;
 }
 
-.service-details ul {
+.career-details ul {
   list-style: none;
   padding: 0;
   font-size: 15px;
 }
 
-.service-details ul li {
+.career-details ul li {
   padding: 5px 0;
   display: flex;
   align-items: center;
 }
 
-.service-details ul i {
-  font-size: 20px;
+.career-details ul i {
+  font-size: 30px;
   margin-right: 8px;
   color: var(--color-primary);
+}
+
+.career-details ul span {
+  font-size: 18px;
 }
 
 /*--------------------------------------------------------------
@@ -2858,4 +2862,78 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.career-details .container h2 {
+  font-weight: 700;
+  font-size: 40px;
+  position: relative;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+.career-details .container h2:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--color-primary);
+  left: 0;
+  bottom: 0;
+}
+
+.career-details .container h3 {
+  font-weight: 700;
+  font-size: 25px;
+  position: relative;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+.career-details .container h3:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--color-primary);
+  left: 0;
+  bottom: 0;
+}
+
+.career-details .job-desc i {
+  font-size: 15px !important;
+}
+
+.career-details .job-desc span {
+  font-size: 15px !important;
+}
+
+.apply-btn {
+  background-color: var(--color-secondary) !important;
+  border: 1px solid var(--color-secondary) !important;
+}
+
+.apply-btn:hover {
+  background-color: var(--color-primary) !important;
+}
+
+.horizontal-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.horizontal-list li {
+  background-color: var(
+    --color-primary
+  ); /* Bootstrap primary color, change as needed */
+  border: 0 !important;
+  padding: 10px !important;
+  color: white;
+  border-radius: 25px; /* Rounded corners */
 }

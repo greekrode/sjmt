@@ -148,6 +148,15 @@ const Header: React.FC<HeaderProps> = ({
               </li>
               <li>
                 <a
+                  href="/career"
+                  className={pathname === "/career" ? "active" : ""}
+                  onClick={handleNavLinkClick}
+                >
+                  Careers
+                </a>
+              </li>
+              <li>
+                <a
                   href="/contact"
                   className={pathname === "/contact" ? "active" : ""}
                   onClick={handleNavLinkClick}
