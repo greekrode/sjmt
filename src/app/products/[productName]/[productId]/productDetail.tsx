@@ -93,11 +93,11 @@ const GitiProductDetailTab = ({ product }: { product: ProductDetailType }) => {
         </ul>
         <div className="tab-content">
           <div className={`tab-pane active show`} id={`tab-0`} key={0}>
-            <section id="stats-counter" className="stats-counter">
+            <section id="overview-counter" className="overview-counter">
               <div className="container">
                 <div className="row gy-4">
                   <div className="col-lg-3 col-md-6">
-                    <div className="stats-item d-flex align-items-center w-100 h-100">
+                    <div className="overview-item d-flex align-items-center w-100 h-100">
                       <i className="bi bi-arrows-angle-expand color-blue flex-shrink-0"></i>
                       <div>
                         <span>{product.overview?.rim_size || "0"}</span>
@@ -106,7 +106,7 @@ const GitiProductDetailTab = ({ product }: { product: ProductDetailType }) => {
                     </div>
                   </div>
                   <div className="col-lg-3 col-md-6">
-                    <div className="stats-item d-flex align-items-center w-100 h-100">
+                    <div className="overview-item d-flex align-items-center w-100 h-100">
                       <i className="bi bi-aspect-ratio color-blue flex-shrink-0"></i>
                       <div>
                         <span>{product.overview?.aspect_ratio || "0"}</span>
@@ -115,7 +115,7 @@ const GitiProductDetailTab = ({ product }: { product: ProductDetailType }) => {
                     </div>
                   </div>
                   <div className="col-lg-3 col-md-6">
-                    <div className="stats-item d-flex align-items-center w-100 h-100">
+                    <div className="overview-item d-flex align-items-center w-100 h-100">
                       <i className="bi bi-arrows color-blue flex-shrink-0"></i>
                       <div>
                         <span>{product.overview?.section_width || "0"}</span>
@@ -124,7 +124,7 @@ const GitiProductDetailTab = ({ product }: { product: ProductDetailType }) => {
                     </div>
                   </div>
                   <div className="col-lg-3 col-md-6">
-                    <div className="stats-item d-flex align-items-center w-100 h-100">
+                    <div className="overview-item d-flex align-items-center w-100 h-100">
                       <i className="bi bi-speedometer2 color-blue flex-shrink-0"></i>
                       <div>
                         <span>{product.overview?.speed_rating || "-"}</span>
@@ -433,11 +433,11 @@ const GtRadialProductDetailTab = ({
 
         <div className="tab-content">
           <div className={`tab-pane active show`} id={`tab-0`} key={0}>
-            <section id="stats-counter" className="stats-counter">
+            <section id="overview-counter" className="overview-counter">
               <div className="container">
                 <div className="row gy-4">
                   <div className="col-lg-3 col-md-6">
-                    <div className="stats-item d-flex align-items-center w-100 h-100">
+                    <div className="overview-item d-flex align-items-center w-100 h-100">
                       <i className="bi bi-arrows-angle-expand color-blue flex-shrink-0"></i>
                       <div>
                         <span>{product.overview?.rim_size}</span>
@@ -446,7 +446,7 @@ const GtRadialProductDetailTab = ({
                     </div>
                   </div>
                   <div className="col-lg-3 col-md-6">
-                    <div className="stats-item d-flex align-items-center w-100 h-100">
+                    <div className="overview-item d-flex align-items-center w-100 h-100">
                       <i className="bi bi-aspect-ratio color-blue flex-shrink-0"></i>
                       <div>
                         <span>{product.overview?.aspect_ratio}</span>
@@ -455,7 +455,7 @@ const GtRadialProductDetailTab = ({
                     </div>
                   </div>
                   <div className="col-lg-3 col-md-6">
-                    <div className="stats-item d-flex align-items-center w-100 h-100">
+                    <div className="overview-item d-flex align-items-center w-100 h-100">
                       <i className="bi bi-arrows color-blue flex-shrink-0"></i>
                       <div>
                         <span>{product.overview?.section_width}</span>
@@ -464,7 +464,7 @@ const GtRadialProductDetailTab = ({
                     </div>
                   </div>
                   <div className="col-lg-3 col-md-6">
-                    <div className="stats-item d-flex align-items-center w-100 h-100">
+                    <div className="overview-item d-flex align-items-center w-100 h-100">
                       <i className="bi bi-speedometer2 color-blue flex-shrink-0"></i>
                       <div>
                         <span>{product.overview?.speed_rating}</span>

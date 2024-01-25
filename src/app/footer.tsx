@@ -37,10 +37,10 @@ const Footer = () => {
                     </a>
                     <br />
                     <a
-                      href="whatsapp://send?phone=6281802803970"
+                      href="whatsapp://send?phone=6281936256028"
                       style={{ color: "#fff" }}
                     >
-                      <strong>Whatsapp:</strong> +62818 0280 3970
+                      <strong>Whatsapp:</strong> +62819 3625 6028
                     </a>
                     <br />
                     <a
@@ -53,7 +53,7 @@ const Footer = () => {
                     </a>
                     <br />
                   </p>
-                  <div className="social-links d-flex mt-3">
+                  {/* <div className="social-links d-flex mt-3">
                     <a
                       href="#"
                       className="d-flex align-items-center justify-content-center"
@@ -72,7 +72,7 @@ const Footer = () => {
                     >
                       <i className="bi bi-instagram"></i>
                     </a>
-                  </div>
+                  </div> */}
                 </div>
               </div>
 
