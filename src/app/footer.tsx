@@ -9,7 +9,7 @@ const Footer = () => {
             <div className="row">
               <div className="col-lg-4 col-md-6">
                 <div className="footer-info">
-                  <h3>PT Suryajaya Muliatama</h3>
+                  <h3>PT Surya Jaya Muliatama</h3>
                   <p>
                     Jl. KH Zainul Arifin
                     <br />
@@ -86,6 +86,9 @@ const Footer = () => {
                     <a href="/about">About us</a>
                   </li>
                   <li>
+                    <a href="/career">Career</a>
+                  </li>
+                  <li>
                     <a href="/contact">Contact Us</a>
                   </li>
                 </ul>
@@ -93,6 +96,9 @@ const Footer = () => {
               <div className="col-lg-2 col-md-3 footer-links">
                 <h4>Products</h4>
                 <ul>
+                  <li>
+                    <a href="/search">Search Producsts</a>
+                  </li>
                   <li>
                     <a href="/products/giti">GITI</a>
                   </li>
@@ -113,7 +119,7 @@ const Footer = () => {
             <div className="copyright">
               Copyright &copy; 2024{" "}
               <strong>
-                <span>Suryajaya Muliatama (SJMT)</span>
+                <span>Surya Jaya Muliatama (SJMT)</span>
               </strong>
               . All Rights Reserved
             </div>
