@@ -1,7 +1,7 @@
 "use client";
 import React, { MouseEventHandler, useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
-import logoImg from "./assets/img/logo.png";
+import logoImg from "../assets/img/logo.png";
 import Image from "next/image";
 
 interface HeaderProps {

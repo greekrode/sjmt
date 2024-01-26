@@ -7,7 +7,7 @@ import {
   gitiProductDataDetail,
   gtProductDataDetail,
   gtrProductDataDetail,
-} from "@/app/data";
+} from "@/app/[locale]/data";
 import ErrorPage from "next/error";
 
 type Overview = {

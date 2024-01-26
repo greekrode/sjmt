@@ -9,12 +9,19 @@ import "./assets/vendor/fontawesome-free/css/all.min.css";
 import "./assets/vendor/glightbox/css/glightbox.min.css";
 import "./assets/vendor/swiper/swiper-bundle.min.css";
 import { inter, open_sans, roboto, work_sans } from "./fonts";
-import Footer from "./footer";
-import Header from "./header";
+import Footer from "./components/footer";
+import Header from "./sections/header";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
 
-const RootLayout = ({ children }: { children: React.ReactNode }) => {
+type LayoutProps = {
+  params: { locale: string };
+  children: React.ReactNode;
+};
+
+const RootLayout = ({ params, children }: LayoutProps) => {
+  const { locale } = params;
+
   const [isMobileNavActive, setIsMobileNavActive] = useState(false);
   const scrollTopRef = useRef<HTMLAnchorElement | null>(null);
 
@@ -47,7 +54,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
 
   return (
     <html
-      lang="en"
+      lang={locale}
       className={`${inter.className} ${roboto.className} ${open_sans.className} ${work_sans.className}`}
     >
       <body className={isMobileNavActive ? "mobile-nav-active" : ""}>
@@ -60,7 +67,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
           toggleMobileNav={toggleMobileNav}
         />
         <main id="main">{children}</main>
-        <Footer />
+        <Footer locale={locale} />
         <AOSInit />
         <JSLoader />
         <Preloader />

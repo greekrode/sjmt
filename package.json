@@ -19,6 +19,7 @@
     "react-bootstrap": "^2.9.2",
     "react-dom": "^18",
     "react-flip-toolkit": "^7.1.0",
+    "react-intl": "^6.6.1",
     "react-spring": "^9.7.3",
     "react-use": "^17.4.2",
     "sharp": "^0.32",

@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import bgImg from "../../assets/img/breadcrumbs-bg.jpg";
 import React from "react";
-import { careerData } from "@/app/data";
+import { careerData } from "@/app/[locale]/data";
 import Link from "next/link";
 
 const Page = ({ params }: { params: { careerId: string } }) => {

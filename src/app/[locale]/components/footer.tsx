@@ -1,15 +1,21 @@
-import React from "react";
+"use client";
 
-const Footer = () => {
+import { useIntl } from "react-intl";
+import IntlContainer from "./intlContainer";
+
+function Footer({ locale }: { locale: string }) {
+  const intl = useIntl();
+  const footerTitle = intl.formatMessage({ id: "footer.title" });
+
   return (
-    <>
+    <IntlContainer locale={locale}>
       <footer id="footer" className="footer">
         <div className="footer-content position-relative">
           <div className="container">
             <div className="row">
               <div className="col-lg-4 col-md-6">
                 <div className="footer-info">
-                  <h3>PT Surya Jaya Muliatama</h3>
+                  <h3>{footerTitle}</h3>
                   <p>
                     Jl. KH Zainul Arifin
                     <br />
@@ -126,8 +132,8 @@ const Footer = () => {
           </div>
         </div>
       </footer>
-    </>
+    </IntlContainer>
   );
-};
+}
 
 export default Footer;
