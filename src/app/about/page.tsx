@@ -79,7 +79,7 @@ const Page = () => {
                 <div className="watch-video d-flex align-items-center position-relative">
                   <i className="bi bi-play-circle"></i>
                   <Link
-                    href="https://www.youtube.com/watch?v=LXb3EKWsInQ"
+                    href="https://www.youtube.com/watch?v=2TiOyP_eXbc"
                     className="glightbox stretched-link"
                     target="_blank"
                   >
