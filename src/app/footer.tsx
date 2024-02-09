@@ -13,7 +13,7 @@ const Footer = () => {
                   <p>
                     Jl. KH Zainul Arifin
                     <br />
-                    Komp. Ketapang Indah Blok B2 No. 6-77
+                    Komp. Ketapang Indah Blok B1 No. 9
                     <br />
                     Jakarta Barat, 11140
                     <br />

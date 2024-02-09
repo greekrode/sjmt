@@ -53,7 +53,7 @@ const Contact = () => {
                 <i className="bi bi-map"></i>
                 <h3>Our Address</h3>
                 <p>
-                  Jl. KH Zainul Arifin, Komp. Ketapang Indah Blok B2 No. 6-77,
+                  Jl. KH Zainul Arifin, Komp. Ketapang Indah Blok B1 No. 9,
                   Jakarta Barat, 11140
                 </p>
               </div>
