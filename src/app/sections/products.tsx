@@ -12,7 +12,7 @@ const Products = () => {
             <h2>Our Products</h2>
             <p className="mt-5">
               We distribute several brands of tires, such as GT Radial, Gajah
-              Tunngal, and GITI. We also offer a wide range of quality car,
+              Tunggal, and GITI. We also offer a wide range of quality car,
               truck, and off-road tires, such as TBR ,OTR ,PCR, LTR, and TBR.
             </p>
             <br />
