@@ -16,7 +16,7 @@ type ProductName = "giti" | "gt" | "gtradial";
 
 const productNameMap: Record<ProductName, string> = {
   giti: "GITI",
-  gt: "GT",
+  gt: "Gajah Tunggal",
   gtradial: "GT RADIAL",
 };
 

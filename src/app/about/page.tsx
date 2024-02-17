@@ -38,7 +38,7 @@ const Page = () => {
             ></div>
 
             <div className="col-lg-7">
-              <h2>Suryajaya Muliatama (SJMT)</h2>
+              <h2>Surya Jaya Muliatama (SJMT)</h2>
               <div className="our-story">
                 <h4>Est 2018</h4>
                 <h3>Our Story</h3>

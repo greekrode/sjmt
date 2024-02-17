@@ -11,11 +11,11 @@ const Hero = () => {
               <div className="col-lg-6 text-center">
                 <h2 data-aos="fade-down">Tire Excellence Unleashed</h2>
                 <p data-aos="fade-up">
-                  Championing tire distribution with top brands GT. RADIAL,
-                  GAJAH TUNGGAL, and GITI. We offer a wide range of quality car,
-                  truck, and off-road tires, such as TBR and OTR. For PCR, LTR,
-                  and TBR, it&apos;s done via company or retail stores across
-                  Jabodetabek.
+                  As the official distributor for GT Radial, Gajah Tunggal and
+                  GITI products, we offer not only a wide range of high quality
+                  tires and tubes for passanger cars, commercial vehicles and
+                  off the road equipments, but also provide solutions and
+                  technical supports for our clients.
                 </p>
                 <a
                   data-aos="fade-up"

@@ -12,10 +12,8 @@ const Products = () => {
             <h2>Our Products</h2>
             <p className="mt-5">
               We distribute several brands of tires, such as GT Radial, Gajah
-              Tunngal, and Giti. We also offer a wide range of quality car,
-              truck, and off-road tires, such as TBR and OTR. For PCR, LTR, and
-              TBR, it&apos;s done via our warehouses or retail stores across
-              Jabodetabek.
+              Tunngal, and GITI. We also offer a wide range of quality car,
+              truck, and off-road tires, such as TBR ,OTR ,PCR, LTR, and TBR.
             </p>
             <br />
             <p className="display-7">

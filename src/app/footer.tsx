@@ -103,7 +103,7 @@ const Footer = () => {
                     <a href="/products/giti">GITI</a>
                   </li>
                   <li>
-                    <a href="/products/gt">GT</a>
+                    <a href="/products/gt">Gajah Tunggal</a>
                   </li>
                   <li>
                     <a href="/products/gtradial">GT Radial</a>

@@ -69,7 +69,7 @@ const Header: React.FC<HeaderProps> = ({
               className="header-logo-img"
             />
             <h1 className="ms-2">
-              SJMT<span>.</span>
+              SJMT
             </h1>
           </a>
 
@@ -132,7 +132,7 @@ const Header: React.FC<HeaderProps> = ({
                   </li>
                   <li>
                     <a href="/products/gt" onClick={handleNavLinkClick}>
-                      GT
+                      Gajah Tunggal
                     </a>
                   </li>
                 </ul>
