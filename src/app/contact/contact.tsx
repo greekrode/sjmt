@@ -17,7 +17,7 @@ const Contact = () => {
   const handleSubmit = (e: any) => {
     e.preventDefault();
     const message = `Name: ${formData.name}\r\n\r\nEmail: ${formData.email}\r\n\r\nSubject: ${formData.subject}\r\n\r\nMessage: ${formData.message}`;
-    const whatsappUrl = `whatsapp://send?phone=6281936256028&text=${encodeURIComponent(
+    const whatsappUrl = `https://api.whatsapp.com/send?phone=6281936256028&text=${encodeURIComponent(
       message
     )}`;
     // Redirect to the URL
