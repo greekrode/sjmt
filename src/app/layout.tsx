@@ -54,6 +54,11 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
         <Head>
           <title>SJMT</title>
           <meta property="og:title" content="SJMT" key="title" />
+          <script
+            defer
+            src="https://umami.kangritel.com/script.js"
+            data-website-id="a2d7c627-d595-41ba-b3c1-11641ca2909c"
+          ></script>
         </Head>
         <Header
           isMobileNavActive={isMobileNavActive}
