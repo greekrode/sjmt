@@ -13,6 +13,7 @@ import Footer from "./footer";
 import Header from "./header";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
+import Script from "next/script";
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   const [isMobileNavActive, setIsMobileNavActive] = useState(false);
@@ -54,12 +55,8 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
         <Head>
           <title>SJMT</title>
           <meta property="og:title" content="SJMT" key="title" />
-          <script
-            defer
-            src="https://umami.kangritel.com/script.js"
-            data-website-id="a2d7c627-d595-41ba-b3c1-11641ca2909c"
-          ></script>
         </Head>
+        <Script defer src="https://analytics.kangritel.com/script.js" />
         <Header
           isMobileNavActive={isMobileNavActive}
           toggleMobileNav={toggleMobileNav}
