@@ -10,6 +10,11 @@ export default function robots(): MetadataRoute.Robots {
     sitemap: [
       "https://sjmt.co.id/sitemap.xml",
       "https://suryajayamuliatama.com/sitemap.xml",
+      "https://suryajayamuliatama.com/sitemap.xml",
+      "https://www.suryajayamuliatama.com/sitemap.xml",
+      "http://suryajayamuliatama.com/sitemap.xml",
+      "http://www.suryajayamuliatama.com/sitemap.xml",
+      "https://sjmt.co.id/sitemap.xml",
     ],
   };
 }
