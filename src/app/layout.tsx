@@ -11,7 +11,6 @@ import "./assets/vendor/swiper/swiper-bundle.min.css";
 import { inter, open_sans, roboto, work_sans } from "./fonts";
 import Footer from "./footer";
 import Header from "./header";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
 import Script from "next/script";
 
@@ -78,7 +77,6 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
         >
           <i className="bi bi-arrow-up-short"></i>
         </a>
-        <SpeedInsights />
         <Analytics />
       </body>
     </html>
