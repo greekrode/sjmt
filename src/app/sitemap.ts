@@ -1,5 +1,6 @@
 import { MetadataRoute } from "next";
 import { gtrProductData, gtProductData, gitiProductData } from "./data";
+import { newsData } from "./news/newsData";
 
 const generateProductUrls = (
   domain: string,
@@ -17,6 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticUrls = [
     { path: "", priority: 1 },
     { path: "about", priority: 0.8 },
+    { path: "news", priority: 0.7 },
     { path: "contact", priority: 0.5 },
   ];
 
@@ -35,6 +37,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...productData.flatMap(({ data, path }) =>
       generateProductUrls(domain, data, path)
     ),
+    ...newsData.map((news) => ({
+      url: `https://${domain}/news/${news.slug}`,
+      lastModified: new Date(),
+      priority: 0.6,
+    })),
   ]);
 
   return sitemapEntries;

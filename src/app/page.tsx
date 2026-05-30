@@ -4,6 +4,7 @@ import Services from "./sections/services";
 import Products from "./sections/products";
 import Hero from "./sections/hero";
 import Teams from "./sections/team";
+import News from "./sections/news";
 import { Metadata } from "next";
 
 const Page = () => {
@@ -13,6 +14,7 @@ const Page = () => {
       <Warehouses />
       <Services />
       <Products />
+      <News />
       <Teams />
     </>
   );
